@@ -83,6 +83,7 @@ li{
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .header .menu{
 	float: right;
 }
@@ -372,3 +373,24 @@ li{
 	margin-left: 5px;
 	margin-right: 5px;
 }
+
+
+
+
+ @media screen and (min-width: 1199px){
+ 	.header h1 .logo{
+ 		margin-left: 25px;
+ 	}
+	.banner .left .content{
+		width: 660px;
+	}
+	.nav{
+		padding-left: 35px;
+		box-sizing: border-box;
+	}
+	.culture{
+		padding-left: 35px;
+		padding-right: 35px;
+		box-sizing: border-box;
+	}
+ }
