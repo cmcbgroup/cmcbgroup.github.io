@@ -393,4 +393,7 @@ li{
 		padding-right: 35px;
 		box-sizing: border-box;
 	}
+	div.jobs-list .list ul li:nth-child(2){
+		width: 18%;
+	}
  }
