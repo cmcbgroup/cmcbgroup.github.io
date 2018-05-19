@@ -393,7 +393,11 @@ li{
 		padding-right: 35px;
 		box-sizing: border-box;
 	}
+	div.jobs-list .list ul li:nth-child(1){
+		padding-left: 30px;
+		box-sizing: border-box;
+	}
 	div.jobs-list .list ul li:nth-child(2){
-		width: 18%;
+		width: 20%;
 	}
  }
