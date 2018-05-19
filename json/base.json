@@ -15,6 +15,10 @@ var h_menu = [
 			{
 				"title": "發展歷程",
 				"href": "about/history.html"
+			},
+			{
+				"title": "活動圖片",
+				"href": "news/activity.html"
 			}
 		]
 	},

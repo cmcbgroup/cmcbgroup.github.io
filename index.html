@@ -29,24 +29,28 @@
 				</div>
 			</div>
 		</div>
+		<!-- <video autoplay muted loop poster="" width="100%">
+			<source src="public/video/20171025_Highlight.mp4">
+		</video> -->
 		<div class="banner">
+			<video autoplay muted loop poster="public/video/cover.jpg" width="100%">
+				<source src="public/video/20171025_Highlight_20180519164119.mp4">
+			</video>
 			<div class="description">
 				<div class="left">
 					<div class="content">
-						<h3>跨界整合，多元化培育競爭力</h3>
-						<p>隨著消費的升級與技術的進步，消費者對產品和服務的需求呈現多元化、多樣化的趨勢。為更好的應對市場的變化和消費需求，國美在全國範圍內開展以“增強技能，服務升級”為主題的第一屆員工專業技能大賽，零售終端員工...</p>
+						<h3>津萬文創商業集團</h3>
+						<p>文化產業是中國最具發展潛力的新興產業之一，也是中國政府列為重點扶持的文化產業，現在正在成為新的經濟增長點。津萬抓緊國家對文化的機遇，以自家品牌及品牌管理作為核心發展，打造全方位文化產業集團，覆蓋整個產業鏈...</p>
 					</div>
 				</div>
 				<div class="right">
-					<div class="content-about">
-						<h3>關注我們</h3>
-					</div>
 					<div class="content-tel">
 						<h3>服務熱線</h3>
-						<p>1234 5678</p>
+						<p>(852)2177 3535</p>
 					</div>
 				</div>
 			</div>
+			<div class="banner-bg"></div>
 		</div>
 
 		<div class="industry-nav">
@@ -56,12 +60,19 @@
 			</a>
 		</div>
 
-		<div class="banner-2"><img width="100%" src="public/images/banner2.jpg" alt=""></div>
+		<!-- <div class="banner-2"><img width="100%" src="public/images/banner2.jpg" alt=""></div> -->
+		<div v-if="v_activity" class="title"><span>活動圖片</span><div class="line"></div></div>
+		<div v-if="v_activity" class="i-activitry base-wrap">
+			<a v-for="a in v_activity" :href="'news/activity.html'">
+				<img :src="'public/images/' + a.photo" alt="">
+			</a>
+			<br class="clear">
+		</div>
 
 		<div class="i-about">
 			<div class="i-about-wrap base-wrap">
 				<h5>津萬文創商業集團</h5>
-				<p>隨著消費的升級與技術的進步...</p>
+				<p>文化產業是中國最具發展潛力的新興產業之一...</p>
 				<a href="about/culture.html">了解詳情</a>
 			</div>
 		</div>
@@ -69,8 +80,8 @@
 		<div class="title"><span>集团新闻</span><div class="line"></div></div>
 		<div class="news-list row-3 base-wrap">
 			<div v-if="v_news" v-for="(n, i) in v_news" class="news">
-				<a :href="'news/default.html?21659' + i" class="cover">
-					<img :src="'public/images/news/'+n.photo[0]" alt="">
+				<a :href="'news/default.html?n=21659' + i" class="cover">
+					<img :src="'public/images/news/'+n.cover" alt="">
 				</a>
 				<h6 :title="n.title">
 					<a v-html="matchTitle(n.title)" :href="'news/default.html?n=21659' + i"></a>
@@ -104,12 +115,14 @@
 					h_menu: h_menu,
 					v_news: false,
 					brands: brands,
+					v_activity: false,
 					industry: industry,
 					f_menu: f_menu
 				}
 			},
 			mounted() {
 				this.v_news = news.slice(0,3)
+				this.v_activity = activity.slice(0,3)
 			},
 			methods: {
 				matchTitle(t) {

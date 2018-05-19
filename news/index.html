@@ -35,11 +35,11 @@
 			<span>集團新聞</span>
 		</div>
 
-		<div class="title"><span>集团新闻</span><div class="line"></div></div>
+		<div class="title"><span>集團新聞</span><div class="line"></div></div>
 		<div class="news-list row-2 base-wrap">
 			<div v-if="v_news" v-for="(n, i) in v_news" class="news">
 				<a :title="n.title" :href="'default.html?n=21659' + i" class="cover">
-					<img :src="'../public/images/news/'+n.photo[0]" alt="">
+					<img :src="'../public/images/news/'+n.cover" alt="">
 				</a>
 				<h6 :title="n.title">
 					<a v-html="matchTitle(n.title)" :href="'default.html?n=21659' + i"></a>

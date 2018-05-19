@@ -36,12 +36,11 @@
 			<span v-html="news_default.title"></span>
 		</div>
 
-		<div class="title mt50"><span v-html="news_default.title">集团新闻</span><div class="line"></div></div>
+		<div class="title mt50"><span v-html="news_default.title">集團新聞</span><div class="line"></div></div>
 		<div class="news-default base-wrap">
 			<div v-html="'發佈時間：' + news_default.date" class="date"></div>
 			<div class="default">
-				<p v-for="c in news_default.content" v-html="c"></p>
-				<img :src="'../public/images/news/' + news_default.photo[0]" alt="">
+				<section v-for="c in news_default.content" v-html="c"></section>
 			</div>
 			<div class="news-nav">
 				<span class="next">下一篇：

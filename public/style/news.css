@@ -8,8 +8,13 @@
 	box-sizing: border-box;
 	padding: 10px;
 }
-.news-list .news img{
-	height: 280px;
+.news-list.row-3 .news img{
+	min-width: 100%;
+	margin-left: -65px;
+}
+.news-list.row-2 .news img{
+	min-height: 280px;
+	min-width: 100%;
 }
 .news-list .news .cover{
 	display: block;
@@ -91,7 +96,12 @@
 	line-height: 1.75em;
 	letter-spacing: .8px;
 	text-indent: 2em;
+	margin-top: 20px;
 	margin-bottom: 20px;
+}
+.news-default .default h2{
+	padding-top: 10px;
+	font-weight: bold;
 }
 .news-nav{
 	font-size: 14px;
@@ -108,4 +118,23 @@
 }
 .news-nav .next{
 	float: right;
+}
+
+
+/* 活动图片 */
+.i-activitry{
+	margin-bottom: 50px;
+}
+.i-activitry a,
+.activitry-default span{
+	width: 33.33%;
+	float: left;
+}
+.i-activitry a img,
+.activitry-default span img{
+	width: 100%;
+}
+.activitry-default{
+	font-size: 0;
+	margin-bottom: 50px;
 }

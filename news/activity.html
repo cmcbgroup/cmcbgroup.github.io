@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>活動圖片 - 公司簡介 - 津萬文創商業集團</title>
+    <meta name="viewport" content="width=1200">
+	<script src="../public/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
+	<link rel="stylesheet" type="text/css" href="../public/style/news.css">
+	<script src="../json/base.json"></script>
+	<script src="../json/news.json"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<div class="base-wrap">
+				<h1><span class="logo"></span></h1>
+				<div class="menu">
+					<div v-for="(m, i) in h_menu" class="m-btn" :class="{'has-sub-menu' : m.submenu}">
+						<a :class="{'On' : i === h_menu_index}"  v-html="m.title" :href="'../' + m.href"></a>
+						<ul>
+							<li v-for="s in m.submenu">
+								<a v-html="s.title" :href="'../' + s.href"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sub-banner"></div>
+		<div class="nav base-wrap">
+			<a href="../index.html">首页</a> >
+			<span>公司簡介</span> >
+			<a href="index.html">活動圖片</a> >
+		</div>
+
+		<div class="title mt50"><span>活動圖片</span><div class="line"></div></div>
+		<div class="activitry-default base-wrap">
+			<span v-for="a in v_activity">
+				<img :src="'../public/images/' + a.photo" alt="">
+			</span>
+			<br class="clear">
+		</div>
+
+
+		<div class="footer">
+			<div class="f-wrap">
+				<dl v-for="(fm,key) in f_menu">
+					<dt v-html="key"></dt>
+					<dd v-for="m in fm"><a v-html="m.title" :href="'../' + m.href"></a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../public/js/base.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data() {
+				return {
+					h_menu: h_menu,
+					v_activity: activity,
+					f_menu: f_menu
+				}
+			},
+			mounted() {
+			},
+			methods: {
+			}
+		})
+	</script>
+</body>
+</html>

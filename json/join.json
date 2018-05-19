@@ -26,7 +26,7 @@ var jobs = [
 		"title": "Android高級開發工程師",
 		"department": "技術中心",
 		"type": "技術類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "漫道文化科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -51,7 +51,7 @@ var jobs = [
 		"title": "H5開發工程師",
 		"department": "技術中心",
 		"type": "技術類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "軒文科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -75,7 +75,7 @@ var jobs = [
 		"title": "營銷專員",
 		"department": "業務中心",
 		"type": "業務及職能類崗位",
-		"location": "澳門",
+		"location": "香港",
 		"company": "華文品牌管理有限公司",
 		"number": "若幹",
 		"duty": [
@@ -95,7 +95,7 @@ var jobs = [
 		"title": "産品經理/高級産品經理",
 		"department": "技術中心",
 		"type": "技術類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "漫道文化科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -123,7 +123,7 @@ var jobs = [
 		"title": "培訓主管",
 		"department": "人事管理",
 		"type": "業務及職能類崗位",
-		"location": "澳門",
+		"location": "香港",
 		"company": "軒文科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -167,7 +167,7 @@ var jobs = [
 		"title": "美工設計",
 		"department": "技術中心",
 		"type": "業務及職能類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "漫道文化科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -189,7 +189,7 @@ var jobs = [
 		"title": "Java研發工程師",
 		"department": "技術中心",
 		"type": "技術類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "軒文科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -212,7 +212,7 @@ var jobs = [
 		"title": "BD經理/主管",
 		"department": "業務中心",
 		"type": "業務及職能類崗位",
-		"location": "澳門",
+		"location": "香港",
 		"company": "華文品牌管理有限公司",
 		"number": "若幹",
 		"duty": [
@@ -235,7 +235,7 @@ var jobs = [
 		"title": "測試工程師",
 		"department": "技術中心",
 		"type": "技術類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "漫道文化科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -258,7 +258,7 @@ var jobs = [
 		"title": "UI設計師",
 		"department": "技術中心",
 		"type": "技術類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "軒文科技有限公司",
 		"number": "若幹",
 		"duty": [
@@ -279,7 +279,7 @@ var jobs = [
 		"title": "物流專員",
 		"department": "業務中心",
 		"type": "業務及職能類崗位",
-		"location": "澳門",
+		"location": "中山",
 		"company": "華文品牌管理有限公司",
 		"number": "若幹",
 		"duty": [
