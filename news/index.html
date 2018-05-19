@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>集團新聞 - 關於我們 - 津萬文創商業集團</title>
+	<script src="../public/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
+	<link rel="stylesheet" type="text/css" href="../public/style/news.css">
+	<script src="../json/base.json"></script>
+	<script src="../json/news.json"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<div class="base-wrap">
+				<h1><span class="logo"></span></h1>
+				<div class="menu">
+					<div v-for="(m, i) in h_menu" class="m-btn" :class="{'has-sub-menu' : m.submenu}">
+						<a :class="{'On' : i === h_menu_index}"  v-html="m.title" :href="'../' + m.href"></a>
+						<ul>
+							<li v-for="s in m.submenu">
+								<a v-html="s.title" :href="'../' + s.href"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sub-banner"></div>
+		<div class="nav base-wrap">
+			<a href="../index.html">首页</a> >
+			<span>關於我們</span> >
+			<span>集團新聞</span>
+		</div>
+
+		<div class="title"><span>集团新闻</span><div class="line"></div></div>
+		<div class="news-list row-2 base-wrap">
+			<div v-if="v_news" v-for="(n, i) in v_news" class="news">
+				<a :title="n.title" :href="'default.html?n=21659' + i" class="cover">
+					<img :src="'../public/images/news/'+n.photo[0]" alt="">
+				</a>
+				<h6 :title="n.title">
+					<a v-html="matchTitle(n.title)" :href="'default.html?n=21659' + i"></a>
+				</h6>
+				<p class="date" v-html="'發佈時間：' + n.date"></p>
+				<p v-html="matchContent(n.content[0])"></p>
+				<a class="btn" :href="'default.html?n=21659' + i">閱讀全文</a>
+			</div>
+			<br class="clear">
+		</div>
+
+		<div class="footer">
+			<div class="f-wrap">
+				<dl v-for="(fm,key) in f_menu">
+					<dt v-html="key"></dt>
+					<dd v-for="m in fm"><a v-html="m.title" :href="'../' + m.href"></a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../public/js/base.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data() {
+				return {
+					h_menu: h_menu,
+					v_news: news,
+					f_menu: f_menu
+				}
+			},
+			mounted() {
+			},
+			methods: {
+				matchTitle(t) {
+					var title = t +''
+					if (title.length > 22) {
+						return title.substring(0,22) + '...'
+					} else {
+						return title.substring(0,22)
+					}
+				},
+				matchContent(txt) {
+					var str= txt +''
+					if(str.length > 86){
+						return str.substring(0,90) + '......'
+					}else{
+						return str.substring(0,90)
+					}
+					
+				}
+			}
+		})
+	</script>
+</body>
+</html>

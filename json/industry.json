@@ -1,0 +1,32 @@
+var industry = [
+	{
+		"project": "動漫產業",
+		"en": "comics",
+		"description": "動漫產業是中國最具發展潛力的新興產業之一，也是中國政府列為重點扶持的文化產業，現在正在成為新的經濟增長點。<hr/>津萬捉緊國家對文化創新支持的機遇，以「MAD-KING.CLUB」品牌作為核心發展的動漫生態娛樂公司，打做全方位文化產業集團，覆蓋整個產業鏈。<hr/>津萬作為澳門首家動漫創作公司，配合澳門經濟適度多元發展，銳意打造澳門原創動漫品牌。",
+		"banner": "comsics.jpg"
+	},
+	{
+		"project": "潮流服裝",
+		"en": "habiliment",
+		"description": "Casual but Elegant “簡約卻不失優雅”一直是 mattmatt 堅持的設計風格，充分吸納源自于日韓等地的時尚設計風格，並巧妙地將這些風格進行融合，根據每季設計主題，配合現代個人特點要求，給予各種形象需求。在不同搭配的形式下，滿足到各種不同場合的穿著需求，打造獨具品位的服飾文化。",
+		"banner": "habiliment.jpg"
+	},
+	{
+		"project": "網絡科技",
+		"en": "network",
+		"description": "資訊技術系統開發和線下解決方案的設計在內的綜合性解決方案，旨在為客戶量身打造一套因地制宜的、適應性高的、可用性強的、軟硬性兼顧的一體性技術系統。<hr/>我們為企業客戶提供企業管道網站建設，企業資訊系統建設，以及基於web的解決方案等服務。解決方案可覆蓋PC的web端、蘋果和安卓手機端以及運行安卓或IOS系統的平板設備。",
+		"banner": "network.jpg"
+	},
+	{
+		"project": "金融",
+		"en": "financial",
+		"description": "",
+		"banner": "waiting.jpg"
+	},
+	{
+		"project": "跨境貿易",
+		"en": "trading",
+		"description": "",
+		"banner": "waiting.jpg"
+	}
+]

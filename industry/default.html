@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>產業詳情 - 津萬產業 - 津萬文創商業集團</title>
+	<script src="../public/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
+	<link rel="stylesheet" type="text/css" href="../public/style/industry.css">
+	<script src="../json/base.json"></script>
+	<script src="../json/industry.json"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<div class="base-wrap">
+				<h1><span class="logo"></span></h1>
+				<div class="menu">
+					<div v-for="(m, i) in h_menu" class="m-btn" :class="{'has-sub-menu' : m.submenu}">
+						<a :class="{'On' : i === h_menu_index}"  v-html="m.title" :href="'../' + m.href"></a>
+						<ul>
+							<li v-for="s in m.submenu">
+								<a v-html="s.title" :href="'../' + s.href"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sub-banner"></div>
+		<div class="nav base-wrap">
+			<a href="../index.html">首页</a> >
+			<a href="index.html">津萬產業</a> >
+			<span v-html="v_industry_default.project">產業詳情</span>
+		</div>
+
+		<div class="title"><span v-html="v_industry_default.project">產業詳情</span><div class="line"></div></div>
+
+		<div class="industry-default base-wrap">
+			<p v-if="v_industry_default.description" v-html="v_industry_default.description"></p>
+			<p class="waiting" v-else>不日推出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;敬請期待...</p>
+			<img :src="'../public/images/industry/' + v_industry_default.banner" alt="">
+		</div>
+
+		<div class="footer">
+			<div class="f-wrap">
+				<dl v-for="(fm,key) in f_menu">
+					<dt v-html="key"></dt>
+					<dd v-for="m in fm"><a v-html="m.title" :href="'../' + m.href"></a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../public/js/base.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data() {
+				return {
+					h_menu: h_menu,
+					v_industry: industry,
+					v_industry_default: industry[0],
+					f_menu: f_menu
+				}
+			},
+			mounted() {
+				var hash = this.GetQueryString("b")
+				if(hash !== 'comics'){
+					var index = hash === 'habiliment'? 1 : hash === 'network' ? 2 : hash === 'financial' ? 3 : hash === 'trading' ? 4 : 0
+					this.v_industry_default = this.v_industry[index]
+				}
+			},
+			methods: {
+				GetQueryString(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i")
+					var r = window.location.search.substr(1).match(reg)
+					if (r != null) return unescape(r[2]); return null
+				}
+			}
+		})
+	</script>
+</body>
+</html>

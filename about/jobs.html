@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加入我們 - 關於我們 - 津萬文創商業集團</title>
+	<script src="../public/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
+	<link rel="stylesheet" type="text/css" href="../public/style/join.css">
+	<script src="../json/base.json"></script>
+	<script src="../json/join.json"></script>
+	<script src="../json/brands.json"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<div class="base-wrap">
+				<h1><span class="logo"></span></h1>
+				<div class="menu">
+					<div v-for="(m, i) in h_menu" class="m-btn" :class="{'has-sub-menu' : m.submenu}">
+						<a :class="{'fb' : i === h_menu_index}" v-html="m.title" :href="'../' + m.href"></a>
+						<ul>
+							<li v-for="s in m.submenu">
+								<a v-html="s.title" :href="'../' + s.href"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sub-banner"></div>
+		<div class="nav base-wrap">
+			<a href="../index.html">首页</a> >
+			<span>關於我們</span> >
+			<a href="join.html">加入我們</a> >
+			<span v-html="v_jobs.title"></span>
+		</div>
+
+		<div class="title"><span v-html="v_jobs.title"></span><div class="line"></div></div>
+		<div v-if="v_jobs" class="base-wrap">
+			<ul class="jobs info">
+				<li><span>所屬部門：</span><span v-html="v_jobs.department"></span></li>
+				<li><span>工作地點：</span><span v-html="v_jobs.location"></span></li>
+				<li><span>招聘人數：</span><span v-html="v_jobs.number"></span></li>
+				<li><span>就職公司：</span><span v-html="v_jobs.company"></span></li>
+				<li><span>職位類別：</span><span v-html="v_jobs.type"></span></li>
+				<li><span>發佈時間：</span><span v-html="v_jobs.date"></span></li>
+			</ul>
+			<dl class="jobs duty">
+				<dt>工作職責</dt>
+				<dd v-for="d in v_jobs.duty" v-html="d"></dd>
+			</dl>
+			<dl class="jobs condition">
+				<dt>任職資格</dt>
+				<dd v-for="c in v_jobs.condition" v-html="c"></dd>
+			</dl>
+			<span class="join_us_btn" @click="_showContent()">加入我們</span>
+		</div>
+		
+		<div v-if="showContent" class="popup_bg" @click="_showContent()"></div>
+		<div v-if="showContent" class="join_content_popup">
+			<div class="head">提示</div>
+			<h6>申請此職位</h6>
+			<p>發送你的簡歷至 hr@CMCBgroup.com</p>
+			<span class="btn" @click="_showContent()">确定</span>
+		</div>
+
+		<div class="title"><span>其他熱招職位</span><div class="line"></div></div>
+		<div class="base-wrap other_jobs">
+			<span v-for="(j, i) in all_jobs"
+			 v-if="i === v_jobs_index"
+			 v-html="j.title"
+			 class="Stand"></span>
+			<a v-else
+			 v-html="j.title"
+			 :href="'?d=218516' + i"
+			></a>
+		</div>
+
+		<div class="title"><span>集團旗下子公司招聘</span><div class="line"></div></div>
+		<div class="brands-list base-wrap">
+			<div class="brand" v-for="b in brands" :href="b.href" :title="b.name" target="_bank">
+				<img :src="'../public/images/brands/' + b.logo" :alt="b.name">
+				<p v-html="b.name"></p>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="f-wrap">
+				<dl v-for="(fm,key) in f_menu">
+					<dt v-html="key"></dt>
+					<dd v-for="m in fm"><a v-html="m.title" :href="'../' + m.href"></a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../public/js/base.js"></script>
+	<script type="text/javascript">
+		var jobs_num = 8
+		var app = new Vue({
+			el: '#app',
+			data() {
+				return {
+					h_menu: h_menu,
+					all_jobs: jobs,
+					v_jobs: jobs[0],
+					v_jobs_index: 0,
+					showContent: false,
+					f_menu: f_menu
+				}
+			},
+			mounted() {
+				// slice
+				var hash = this.GetQueryString("d"),
+					index = parseInt(hash.slice(6))
+				this.v_jobs_index = index
+				this.v_jobs = jobs[index]
+			},
+			methods: {
+				_showContent() {
+					this.showContent = !this.showContent
+				},
+				GetQueryString(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i")
+					var r = window.location.search.substr(1).match(reg)
+					if (r != null) return unescape(r[2]); return null
+				}
+			}
+		})
+	</script>
+</body>
+</html>

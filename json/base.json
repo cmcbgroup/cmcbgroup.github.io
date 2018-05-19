@@ -1,0 +1,138 @@
+
+var h_menu = [
+	{
+		"title": "首頁",
+		"href": "index.html"
+	},
+	{
+		"title": "公司簡介",
+		"href": "about/culture.html",
+		"submenu": [
+			{
+				"title": "企業文化",
+				"href": "about/culture.html"
+			},
+			{
+				"title": "發展歷程",
+				"href": "about/history.html"
+			}
+		]
+	},
+	{
+		"title": "津萬產業",
+		"href": "industry/index.html",
+		"submenu": [
+			{
+				"title": "動漫產業",
+				"href": "industry/default.html?b=comics"
+			},
+			{
+				"title": "潮流服裝",
+				"href": "industry/default.html?b=habiliment"
+			},
+			{
+				"title": "網絡科技",
+				"href": "industry/default.html?b=network"
+			},
+			{
+				"title": "金融",
+				"href": "industry/default.html?b=financial"
+			},
+			{
+				"title": "跨境貿易",
+				"href": "industry/default.html?b=trading"
+			}
+		]
+	},
+	{
+		"title": "關於我們",
+		"href": "news/index.html",
+		"submenu": [
+			{
+				"title": "集團新聞",
+				"href": "news/index.html"
+			},
+			{
+				"title": "視頻中心",
+				"href": "about/video.html"
+			},
+			{
+				"title": "管理團隊",
+				"href": "about/team.html"
+			}
+		]
+	},
+	{
+		"title": "加入我們",
+		"href": "about/join.html"
+	},
+	{
+		"title": "聯繫我們",
+		"href": "about/contact.html"
+	}
+]
+
+var f_menu = {
+	"津萬簡介": [
+		{
+			"title": "企業文化",
+			"href": "about/culture.html" 
+		},
+		{
+			"title": "發展歷程",
+			"href": "about/history.html" 
+		}
+	],
+	"津萬產業": [
+		{
+			"title": "動漫產業",
+			"href": "industry/default.html?b=comics"
+		},
+		{
+			"title": "潮流服裝",
+			"href": "industry/default.html?b=habiliment"
+		},
+		{
+			"title": "網絡科技",
+			"href": "industry/default.html?b=network"
+		}
+		// {
+		// 	"title": "金融",
+		// 	"href": "" 
+		// },
+		// {
+		// 	"title": "跨境貿易",
+		// 	"href": "" 
+		// }
+	],
+	"關於我們": [
+		{
+			"title": "企業新聞",
+			"href": "news/index.html" 
+		},
+		{
+			"title": "視頻中心",
+			"href": "about/video.html" 
+		},
+		{
+			"title": "管理團隊",
+			"href": "about/team.html" 
+		}
+	],
+	"聯繫我們": [
+		{
+			"title": "加入我們",
+			"href": "about/join.html" 
+		},
+		{
+			"title": "聯繫方式",
+			"href": "about/contact.html" 
+		}
+	]
+	// "微信公眾號": {
+	// 	"qrcode": ""
+	// },
+	// "新浪微博": {
+	// 	"qrcode": ""
+	// },
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理團隊 - 關於我們 - 津萬文創商業集團</title>
+	<script src="../public/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
+	<link rel="stylesheet" type="text/css" href="../public/style/team.css">
+	<script src="../json/base.json"></script>
+	<script src="../json/team.json"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<div class="base-wrap">
+				<h1><span class="logo"></span></h1>
+				<div class="menu">
+					<div v-for="(m, i) in h_menu" class="m-btn" :class="{'has-sub-menu' : m.submenu}">
+						<a :class="{'On' : i === h_menu_index}" v-html="m.title" :href="'../' + m.href"></a>
+						<ul>
+							<li v-for="s in m.submenu">
+								<a v-html="s.title" :href="'../' + s.href"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sub-banner"></div>
+		<div class="nav base-wrap">
+			<a href="../index.html">首页</a> >
+			<span>關於我們</span> >
+			<span>管理團隊</span>
+		</div>
+
+		<div class="title"><span>管理團隊</span><div class="line"></div></div>
+
+		<div class="team-list">
+			<div v-if="!staff" class="base-wrap">
+				<div class="team" v-for="(t, i) in team">
+					<img @click="_showStaff(i)" :src="'../public/images/team/' + t.avatar" alt="">
+					<h2>
+						<span class="name" v-html="t.name"></span>
+						<span class="line"></span>
+					</h2>
+					<p v-html="t.work"></p>
+				</div>
+				<br class="clear">
+			</div>
+			<div v-if="staff" class="default">
+				<div class="left">
+					<img :src="'../public/images/team/' + staff.avatar" alt="">
+				</div>
+				<div class="right">
+					<div class="content">
+						<h3 v-html="staff.name"></h3>
+						<h4 v-html="staff.enname"></h4>
+						<h5 v-html="staff.work"></h5>
+						<h6 v-html="staff.enwork"></h6>
+						<p v-html="staff.description"></p>
+						<span class="close" @click="_closeStaff()"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="f-wrap">
+				<dl v-for="(fm,key) in f_menu">
+					<dt v-html="key"></dt>
+					<dd v-for="m in fm"><a v-html="m.title" :href="'../' + m.href"></a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../public/js/base.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data() {
+				return {
+					h_menu: h_menu,
+					v_team: team,
+					staff: false,
+					f_menu: f_menu
+				}
+			},
+			mounted() {
+			},
+			methods: {
+				_showStaff(i){
+
+					this.staff = this.v_team[i]
+				},
+				_closeStaff() {
+					this.staff = false
+				}
+			},
+			watch() {
+
+			}
+		})
+	</script>
+</body>
+</html>
