@@ -37,12 +37,24 @@
 
 		<div class="title mt50"><span>活動圖片</span><div class="line"></div></div>
 		<div class="activitry-default base-wrap">
-			<span v-for="a in v_activity">
+			<div class="activitry" v-for="(a, i) in v_activity" @click="selectActivity(i)">
 				<img :src="'../public/images/' + a.photo" alt="">
-			</span>
+				<p v-html="a.title"></p>
+			</div>
 			<br class="clear">
 		</div>
-
+		
+		<!-- <div v-if="v_activity_index" class="popup-bg"></div>
+		<div v-if="v_activity_index" class="popup">
+			<section>
+				
+			</section>
+			<div class="video">
+				<img :src="'../public/images/' + v_activity_index.photo" alt="">
+				<p v-html="v_activity_index.description"></p>
+				<span @click='colsePopup' class='close' title='關閉窗口'>CLOSE</span>
+			</div>
+		</div> -->
 
 		<div class="footer">
 			<div class="f-wrap">
@@ -61,12 +73,17 @@
 				return {
 					h_menu: h_menu,
 					v_activity: activity,
+					v_activity_index: activity[0],
 					f_menu: f_menu
 				}
 			},
 			mounted() {
 			},
 			methods: {
+				selectActivity(i) {
+					console.log(i)
+					this.v_activity_index = this.v_activity[i]
+				}
 			}
 		})
 	</script>

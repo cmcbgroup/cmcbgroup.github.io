@@ -82,3 +82,16 @@ var activity = [
 		"description": ""
 	}
 ]
+
+var video = [
+	{
+		"cover": "video/cover-1.jpg",
+		"description": "津萬文創商業集團簽約儀式",
+		"src": "http://player.youku.com/player.php/sid/XMzExMTc2MTA0MA==/v.swf"
+	},
+	{
+		"cover": "video/cover-2.jpg",
+		"description": "津萬文創商業集團簽精彩回放",
+		"src": "video/20171025_Highlight_20180519164119.mp4"
+	}
+]

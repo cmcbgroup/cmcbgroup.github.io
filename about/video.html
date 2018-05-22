@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=1200">
 	<script src="../public/vue.js"></script>
 	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
-	<link rel="stylesheet" type="text/css" href="../public/style/team.css">
+	<link rel="stylesheet" type="text/css" href="../public/style/news.css">
 	<script src="../json/base.json"></script>
-	<script src="../json/team.json"></script>
+	<script src="../json/news.json"></script>
 </head>
 <body>
 	<div id="app">
@@ -36,6 +36,20 @@
 		</div>
 
 		<div class="title"><span>視頻中心</span><div class="line"></div></div>
+		<div class="video-list base-wrap">
+			<div class="video" v-for="v in v_video">
+				<img :src="'../public/'+v.cover" alt="" @click="matchVideo(v.src)">
+				<p v-html="v.description"></p>
+			</div>
+		</div>
+		<div v-if="v_video_defalut" class="popup-bg"></div>
+		<div v-if="v_video_defalut" class="popup">
+			<div class="video">
+				<section v-html="v_video_defalut"></section>
+				<span @click='colsePopup' class='close' title='關閉窗口'>CLOSE</span>
+				<p>如果您遇到視頻無法播放時，可以嘗試升級瀏覽器，或者使用 Chrome 瀏覽器。</p>
+			</div>
+		</div>
 
 		<div class="footer">
 			<div class="f-wrap">
@@ -53,13 +67,29 @@
 			data() {
 				return {
 					h_menu: h_menu,
+					v_video: video,
+					v_video_defalut: false,
 					f_menu: f_menu
 				}
 			},
 			mounted() {
+				console.log(f_menu)
 			},
 			methods: {
-
+				matchVideo(src){
+					if(src.indexOf('http') > -1){
+						var videoSrc =  "<embed src='http://player.youku.com/player.php/sid/XMzExMTc2MTA0MA==/v.swf' allowFullScreen='true' quality='high' width='820' height='460' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>"
+						this.v_video_defalut = videoSrc
+					} else {
+						var videoSrc =  "<video preload controls poster='../public/video/cover-2.jpg' width='820'>" +
+										"<source src='../public/video/20171025_Highlight_20180521142407.mp4'>"+
+										"</video>"
+						this.v_video_defalut = videoSrc
+					}
+				},
+				colsePopup() {
+					this.v_video_defalut = false
+				}
 			}
 		})
 	</script>

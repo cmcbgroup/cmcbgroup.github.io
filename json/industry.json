@@ -14,8 +14,8 @@ var industry = [
 	{
 		"project": "網絡科技",
 		"en": "network",
-		"description": "資訊技術系統開發和線下解決方案的設計在內的綜合性解決方案，旨在為客戶量身打造一套因地制宜的、適應性高的、可用性強的、軟硬性兼顧的一體性技術系統。<hr/>我們為企業客戶提供企業管道網站建設，企業資訊系統建設，以及基於web的解決方案等服務。解決方案可覆蓋PC的web端、蘋果和安卓手機端以及運行安卓或IOS系統的平板設備。",
-		"banner": "network.jpg"
+		"description": "",
+		"banner": "waiting.jpg"
 	},
 	{
 		"project": "金融",

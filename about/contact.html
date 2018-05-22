@@ -41,8 +41,8 @@
 				<h3 v-html="c.location"></h3>
 				<p v-html="c.address"></p>
 				<ul>
-					<li v-html="'_ ' + c.tel"></li>
-					<li v-if="c.fax" v-html="'_ ' + c.fax"></li>
+					<li v-html="c.tel"></li>
+					<li v-if="c.fax" v-html="c.fax"></li>
 				</ul>
 			</div>
 		</div>

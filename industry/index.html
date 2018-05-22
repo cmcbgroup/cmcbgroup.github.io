@@ -50,7 +50,7 @@
 			<img :src="'../public/images/industry/' + v_industry_default.banner" alt="">
 			<div v-if="v_industry_default.description" class="description">
 				<h2 v-html="v_industry_default.project"></h2>
-				<p v-html="v_industry_default.description"></p>
+				<p v-html="matchDescription(v_industry_default.description)"></p>
 				<a class="btn" :href="'default.html?b=' + v_industry_default.en">了解详情</a>
 			</div>
 		</div>
@@ -83,6 +83,14 @@
 			methods: {
 				_seclectIndustry(i){
 					this.v_industry_index = i
+				},
+				matchDescription(des){
+					if(des.length > 180){
+						return des.substring(0, 180)
+					}else{
+						return des
+					}
+					
 				}
 			},
 			watch: {

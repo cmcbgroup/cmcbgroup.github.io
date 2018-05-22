@@ -31,7 +31,8 @@ footer, header, menu, nav, section{
 body{
   line-height: 1;
   color: #333;
-  font-family: arial,tahoma,宋体;
+  /* font-family: arial,tahoma,宋体; */
+  font-family:'Microsoft YaHei';
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: default;
@@ -106,13 +107,16 @@ li{
 	background: rgba(0,0,0,.6);
 	width: 100%;
 }
-.header .menu .m-btn a{color:#333;}
-.header .menu .m-btn a.On{
+.header .menu .m-btn a{
+	color:#444;
 	font-weight: bold;
 }
-.header .menu .m-btn a:hover,
+.header .menu .m-btn a.On{
+	color: black;
+}
+/* .header .menu .m-btn a:hover,
 .header .menu .m-btn.has-sub-menu:hover a{
-	font-weight: bold;}
+	font-weight: bold;} */
 .header .menu .m-btn.has-sub-menu:hover{
 	background-color: #ecaa39;
 	color: white;
@@ -125,7 +129,7 @@ li{
 }
 .header .menu .m-btn ul li a{color:white;}
 .header .menu .m-btn ul li a:hover{
-	color:#eaab37;font-weight: normal;
+	color:#eaab37;
 }
 
 .brands-list{
@@ -146,7 +150,7 @@ li{
 	font-size: 0;
 	/* height:780px; */
 	position: relative;
-	background-image: url('../images/banner.jpg');
+	background-image: url('../video/cover.jpg');
 	background-position: center 0;
 }
 .banner .banner-bg{
@@ -179,7 +183,7 @@ li{
 .banner .right{
 	color: white;
 	width: 45%;
-	background-color: rgba(236,170,57,.7);
+	background: rgba(236,170,57,.7) url('../images/i-banner-list.png') 35px 85px no-repeat;
 }
 /* .banner .content,
 .banner .right .content-about,
@@ -198,9 +202,18 @@ li{
 	line-height: 1.7em;
 }
 .banner .right h3{
-	font-weight: normal;
-	margin-top: 8px;
+	font-weight: bold;
 	margin-bottom: 20px;
+	position: relative;
+}
+.banner .right h3:after{
+	content: "";
+	position: absolute;
+	left:0;bottom: -17px;
+	display: inline-block;
+	width: 30px;height: 3px;
+	background-color: rgba(255,255,255,.6);
+	border-radius: 1.5px;
 }
 .banner .right .content-about,
 .banner .right .content-tel{
@@ -213,7 +226,7 @@ li{
 	width: 120px;
 	border-right: 1px solid white;
 }
-.banner .right .content-tel p{font-size:32px;font-weight:bold;}
+/* .banner .right .content-tel p{font-size:32px;font-weight:bold;} */
 
 /* 津万产业 */
 .industry-nav{
