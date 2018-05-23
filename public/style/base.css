@@ -182,7 +182,7 @@ li{
 	left: 0;bottom: 0;
 }
 .banner .description.positionUnset{
-	position: unset;
+	position: static;
 }
 .banner .description h3{
 	font-size: 18px;
