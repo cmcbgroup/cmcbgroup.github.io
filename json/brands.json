@@ -12,6 +12,6 @@ var brands = [
 	{
 		"name": "軒文科技有限公司",
 		"logo": "ioe.png",
-		"href": "javascript:void(0)"
+		"href": ""
 	}
 ]

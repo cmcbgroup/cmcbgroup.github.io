@@ -116,8 +116,12 @@
 
 		<div class="title"><span>集團旗下子公司</span><div class="line"></div></div>
 		<div class="brands-list base-wrap">
-			<a v-for="b in brands" :href="b.href" :title="b.name" target="_bank">
-				<img :src="'public/images/brands/' + b.logo" :alt="b.name"></a>
+			<a v-for="b in brands" :href="b.href" v-if="b.href" :title="b.name" target="_bank">
+				<img :src="'public/images/brands/' + b.logo" :alt="b.name">
+			</a>
+			<span v-else :title="b.name">
+				<img :src="'public/images/brands/' + b.logo" :alt="b.name">
+			</span>
 		</div>
 
 		<div class="footer">

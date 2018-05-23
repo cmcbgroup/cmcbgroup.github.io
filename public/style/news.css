@@ -161,12 +161,16 @@
 .video-list{
 	width: 650px
 }
-.video-list img{
+/* .video-list img{
 	width: 100%;
-	cursor: pointer;
-}
+} */
 .video-list .video{
 	margin-bottom: 25px;
+}
+.video-list .video .cover{
+	height: 360px;
+	background-size: 100%;
+	cursor: pointer;
 }
 .video-list .video:nth-child(1){
 	border-bottom: 1px dashed #ddd;

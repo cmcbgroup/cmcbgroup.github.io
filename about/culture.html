@@ -12,7 +12,8 @@
 </head>
 <body>
 	<div id="app">
-		<div class="header">
+		<div v-if="!v_menu" class="Loading"><p>loading...</p></div>
+		<div v-if="isPhone" class="header">
 			<div class="base-wrap">
 				<h1><span class="logo"></span></h1>
 				<div class="menu">
@@ -27,6 +28,27 @@
 				</div>
 			</div>
 		</div>
+
+		<div v-if="showPhoneMenu" class="phoneMenuBg" @click="_showPhoneMenu()"></div>
+		<div v-if="!isPhone" class="phoneHeaderStand"></div>
+		<div v-if="!isPhone" class="phoneHeader">
+			<span class="show-menu-icon" @click="_showPhoneMenu()"></span>
+		</div>
+		<dl v-if="!isPhone" class="phoneMenu" :class="{'Show': showPhoneMenu}">
+			<dt><span class="closePhoneMenu" @click="_showPhoneMenu()"></span></dt>
+			<dd v-for="(m, i) in h_menu" :class="{'Show': i === show_sub_menu_index}">
+				<span v-if="m.submenu" @click="_showPhoneSubMenu(event, i, m.submenu.length)">
+					<a v-html="m.title" :href="'../' + m.href"></a>
+				</span>
+				<a v-else v-html="m.title" :href="'../' + m.href"></a>
+
+				<ul v-if="m.submenu">
+					<li v-for="s in m.submenu">
+						<a v-html="s.title" :href="'../' + s.href"></a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
 		
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
@@ -49,7 +71,7 @@
 
 		<div class="footer">
 			<div class="f-wrap">
-				<dl v-for="(fm,key) in f_menu">
+				<dl v-for="(fm,key) in v_menu">
 					<dt v-html="key"></dt>
 					<dd v-for="m in fm"><a v-html="m.title" :href="'../' + m.href"></a></dd>
 				</dl>
@@ -64,13 +86,28 @@
 				return {
 					h_menu: h_menu,
 					culture: culture,
-					f_menu: f_menu
+					v_menu: f_menu,
+					showPhoneMenu: false,
+					show_sub_menu_index: false,
+					isPhone: true
 				}
 			},
 			mounted() {
+				if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					this.isPhone = false
+				}
 			},
 			methods: {
-
+				_showPhoneMenu() {
+					this.showPhoneMenu = !this.showPhoneMenu
+				},
+				_showPhoneSubMenu(e, i, len) {
+					if(i === this.show_sub_menu_index){
+						this.show_sub_menu_index = false
+					} else {
+						this.show_sub_menu_index = i
+					}
+				}
 			}
 		})
 	</script>
