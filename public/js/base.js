@@ -35,4 +35,9 @@ var getMenuIndex = function() {
 	return parseInt(menuIndex)
 }
 var h_menu_index = getMenuIndex()
-console.log(h_menu_index)
+
+
+var isPhone = true
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    isPhone = false
+}
