@@ -452,6 +452,9 @@ li{
 	height: 100%;
 	background-color: white;
 }
+.phoneMenu dd > a {
+	display: block;
+}
 .phoneMenu.Show{
 	left: 0;
 }
@@ -514,7 +517,8 @@ li{
 	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
 	-o-transform:rotate(90deg); 	/* Opera */
 }
-.phoneMenu dd.Show ul{
+.phoneMenu dd.Show ul,
+.phoneMenu dd.Show ul > li > a{
 	display: block;
 }
 .phoneMenu dd.Show li{
