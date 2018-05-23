@@ -14,6 +14,7 @@
 </head>
 <body>
 	<div id="app">
+		<div v-if="!v_menu" class="Loading"><p>loading...</p></div>
 		<div v-if="isPhone" class="header">
 			<div class="base-wrap">
 				<h1><span class="logo"></span></h1>
@@ -59,7 +60,7 @@
 			</video>
 			<img v-else src="public/images/banner.jpg" width="100%" alt="">
 
-			<div class="description">
+			<div class="description" :class="{'positionUnset' : !isPhone}">
 				<div class="left">
 					<div class="content">
 						<h3>津萬文創商業集團</h3>
@@ -121,7 +122,7 @@
 
 		<div class="footer">
 			<div class="f-wrap">
-				<dl v-for="(fm,key) in f_menu">
+				<dl v-for="(fm,key) in v_menu">
 					<dt v-html="key"></dt>
 					<dd v-for="m in fm"><a v-html="m.title" :href="m.href"></a></dd>
 				</dl>
@@ -139,7 +140,7 @@
 					brands: brands,
 					v_activity: false,
 					industry: industry,
-					f_menu: f_menu,
+					v_menu: f_menu,
 					showPhoneMenu: false,
 					show_sub_menu_index: false,
 					isPhone: true
