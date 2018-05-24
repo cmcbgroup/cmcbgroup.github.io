@@ -122,40 +122,57 @@
 
 
 /* 活动图片 */
-.i-activitry{
+.i-activity{
 	margin-bottom: 50px;
 }
-.i-activitry a,
-.activitry-default .activitry{
-	width: 33.33%;
+.i-activity a,
+.activity-list .activity{
+	color: #333;
+	width: 32.33%;
 	float: left;
 }
-.activitry-default{
-	font-size: 0;
-	margin-bottom: 50px;
+.activity-list .activity{
+	box-sizing: border-box;
+	margin: 0 .5% 1%;
+	padding: 1%;
+	border-radius: 3px;
 }
-.activitry-default .activitry{
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
-}
-.i-activitry a img,
-.activitry-default .activitry img{
+.i-activity a img{
 	width: 100%;
 }
-.activitry-default .activitry p{
+.activity-list .activity p{
 	font-size: 14px;
-	line-height: 42px;
-	color: white;
-	width: 96%;
-	padding-left: 4%;
-	position: absolute;
-	left: 0;bottom: -42px;
-	background-color: rgba(0,0,0,.5);
+	font-weight: bold;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	padding-top: 5px;
 }
-.activitry-default .activitry:hover p{
-	bottom: 0;
+.activity-list .activity img{
+	width: 100%;
+	border-radius: 3px;
 }
+.activity-list .activity:hover{
+	background-color: #eee;
+	color: #eda93a;
+	color: #000;
+}
+
+/* 活动页面 */
+.activity-default{
+	font-size: 0;
+}
+.activity-date{
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+	margin-bottom: 35px;
+}
+.activity-default img{
+	width: 48%;
+	margin: 0 1% 25px;
+}
+
 
 /* 视频中心 */
 .video-list{

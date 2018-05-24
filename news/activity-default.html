@@ -53,16 +53,15 @@
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
 			<a href="../index.html">首页</a> >
-			<span>活動圖片</span>
+			<a href="activity.html">活動圖片</a> > 
+			<span v-html="activity_default.title"></span>
 		</div>
 
-		<div class="title"><span>活動圖片</span><div class="line"></div></div>
-		<div class="activity-list base-wrap">
-			<a class="activity" v-for="(a, i) in v_activity" :href="'activity-default.html?d='+a.date">
-				<img :src="'../public/images/activity/'+a.date+'/'+a.date+'1.jpg'" alt="">
-				<p v-html="a.title"></p>
-			</a>
-			<br class="clear">
+		<div class="title"><span v-html="activity_default.title"></span><div class="line"></div></div>
+		<div class="activity-date" v-html="matchDate(activity_default.date)"></div>
+		<div class="activity-default base-wrap">
+			<img v-for="i in activity_default.p_length" 
+				:src="'../public/images/activity/' + activity_default.date + '/' + activity_default.date + i + '.jpg'" alt="">
 		</div>
 
 		<div class="footer">
@@ -81,11 +80,10 @@
 			data() {
 				return {
 					h_menu: h_menu,
-					v_activity: activity,
-					v_activity_index: activity[0],
 					v_menu: f_menu,
 					showPhoneMenu: false,
 					show_sub_menu_index: false,
+					activity_default: false,
 					isPhone: true
 				}
 			},
@@ -93,8 +91,24 @@
 				if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 					this.isPhone = false
 				}
+				var hash = this.GetQueryString("d")
+				
+				this.activity_default = this.matchActivity(activity, hash)
 			},
 			methods: {
+				matchActivity(arr, hash){
+					for(a in arr){
+						if(arr[a].date === hash) return arr[a]
+					}
+				},
+				matchDate(date) {
+					return '發佈時間：' + date.substring(0,4) + '年' + date.substring(4,6) + '月' + date.substring(6) + '日'
+				},
+				GetQueryString(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i")
+					var r = window.location.search.substr(1).match(reg)
+					if (r != null) return unescape(r[2]); return null
+				},
 				_showPhoneMenu() {
 					this.showPhoneMenu = !this.showPhoneMenu
 				},

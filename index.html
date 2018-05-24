@@ -85,9 +85,9 @@
 
 		<!-- <div class="banner-2"><img width="100%" src="public/images/banner2.jpg" alt=""></div> -->
 		<div v-if="v_activity" class="title"><span>活動圖片</span><div class="line"></div></div>
-		<div v-if="v_activity" class="i-activitry base-wrap">
-			<a v-for="a in v_activity" :href="'news/activity.html'">
-				<img :src="'public/images/' + a.photo" alt="">
+		<div v-if="v_activity" class="i-activity base-wrap">
+			<a v-for="p in v_activity.p_length" :href="'news/activity.html'">
+				<img :src="'public/images/activity/'+v_activity.date+'/'+v_activity.date+p+'.jpg'" :alt="v_activity.title">
 			</a>
 			<br class="clear">
 		</div>
@@ -152,7 +152,10 @@
 			},
 			mounted() {
 				this.v_news = news.slice(0,3)
-				this.v_activity = activity.slice(0,3)
+
+				var matchActivity = activity[0]
+				matchActivity.p_length = 3
+				this.v_activity = matchActivity
 				if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 					this.isPhone = false
 				}
