@@ -61,6 +61,8 @@ li{
   list-style: none;
 }
 .clear{clear: both;}
+.Hide{display: none;}
+.Hide.Show{display: block;}
 
 .Loading{
 	height: 100%;
