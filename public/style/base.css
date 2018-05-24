@@ -74,9 +74,15 @@ li{
 }
 .Loading p{
 	font-size: 30px;
-	padding-top: 43%;
 	text-align: center;
 	letter-spacing: 1px;
+}
+.Loading p:nth-child(1){
+	padding-top: 43%;
+	color: #555;
+}
+.Loading p:nth-child(2){
+	padding-top: 25px;
 }
 
 .header{
