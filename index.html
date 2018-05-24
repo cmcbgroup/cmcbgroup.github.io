@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div id="app">
-		<div v-if="v_menu" class="Loading">
+		<div v-if="!v_menu" class="Loading">
 			<p v-if="h_menu">如果您打開時間過長，請嘗試使用另外瀏覽器打開。</p>
 			<p>loading...</p>
 		</div>
