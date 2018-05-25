@@ -63,7 +63,7 @@
 				<h3 v-html="c.location"></h3>
 				<p v-html="c.address"></p>
 				<ul>
-					<li v-html="c.tel"></li>
+					<li v-html="'電子郵箱：' + c.email"></li>
 					<li v-if="c.fax" v-html="c.fax"></li>
 				</ul>
 			</div>

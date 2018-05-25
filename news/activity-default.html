@@ -94,6 +94,7 @@
 				var hash = this.GetQueryString("d")
 				
 				this.activity_default = this.matchActivity(activity, hash)
+				console.log(this.activity_default === undefined)
 			},
 			methods: {
 				matchActivity(arr, hash){
