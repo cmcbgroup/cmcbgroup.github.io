@@ -113,7 +113,7 @@
 					<h6 :title="n.title">
 						<a v-html="matchTitle(n.title)" :href="'news/default.html?n=21659' + i"></a>
 					</h6>
-					<p v-html="matchContent(n.content[0])"></p>
+					<p v-html="matchContent(n.content)"></p>
 				</div>
 				<br class="clear">
 			</div>
@@ -175,8 +175,15 @@
 					}
 				},
 				matchContent(txt) {
-					var str= txt +''
-					return str.substring(0,70) + '......'
+					var str= txt[0] +''
+					if(str.indexOf('img') > -1){
+						str= txt[1] +''
+					}
+					if(str.length > 86){
+						return str.substring(0,90) + ' ......'
+					}else{
+						return str.substring(0,90)
+					}
 				},
 				_showPhoneMenu() {
 					this.showPhoneMenu = !this.showPhoneMenu
