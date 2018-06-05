@@ -60,11 +60,18 @@
 		<div class="title"><span>企業文化</span><div class="line"></div></div>
 
 		<div class="culture-list base-wrap">
-			<div v-for="c in culture" class="culture">
+			<div v-for="c in culture" class="culture" :class="{'full-img': c.fullImg}">
 				<img :src="'../public/images/' + c.photo" alt="">
 				<div class="content">
-					<h2 v-html="c.title"></h2>
-					<p v-html="c.description"></p>
+					<h2><span v-html="c.title"></span></h2>
+					<h3 v-if="c.subTitle" v-html="c.subTitle"></h3>
+					<p v-if="c.description" v-html="c.description"></p>
+					<ul class="des-arry" v-else>
+						<li v-for="t in c.desArry">
+							<h3 v-html="t.title"></h3>
+							<p class="desArry-p" v-html="t.description"></p>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

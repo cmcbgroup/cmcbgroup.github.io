@@ -1,18 +1,40 @@
 var culture = [
 	{
+		"photo": "about/culture-0.jpg",
+		"title": "奮鬥目標：任何行業，只做第一",
+		"description": "we don't go for the best, we create the best.",
+		"fullImg": true
+	},
+	{
 		"photo": "about/culture-1.jpg",
-		"title": "核心理念",
-		"description": "熱愛生活，熱情工作。"
+		"title": "企業願景",
+		"description": "致力於發展全方位文化產業，積極開展組織創新合作，整合資本資源，優化文化架構，打造獨具特色的國際化品牌和形象。"
 	},
 	{
 		"photo": "about/culture-2.jpg",
-		"title": "企業文化",
-		"description": "好勇鬥狠，堅韌不屈。"
+		"title": "核心理念",
+		"subTitle": "熱愛生活，熱情工作。",
+		"description": "對生活充滿憧憬和正能量，為追求個人理想，提高自身價值，積極主動的努力工作。"
 	},
 	{
 		"photo": "about/culture-3.jpg",
-		"title": "奮鬥目標",
-		"description": "任何行業，只做第一。"
+		"title": "企業文化",
+		"desArry": [
+			{
+				"title": "好勇鬥狠",
+				"description": "致力於發展全方位文化產業，積極開展組織創新合作，整合資本資源，優化文化架構，打造獨具特色的國際化品牌和形象。"
+			},
+			{
+				"title": "堅韌不屈",
+				"description": "面對困難，我們要頑強拼搏，善於總結經驗，調整方案，攻破困境。古語云：“禍兮福之所倚，福兮禍之所伏。”我們無法預知明天，但可以把握今天，保持樂觀開朗的心態，闊達的胸懷，在這緊張卻不失優雅的工作節奏裏，度過充實而有趣的人生。"
+			}
+		],
+		"fullImg": true
+	},
+	{
+		"photo": "about/culture-4.jpg",
+		"title": "核心價值觀",
+		"description": "<span style='font-size:16px;font-weight:bold;color:#555;line-height:2.2em;'>開拓創新，精益求精。自我批判，艱苦奮鬥。<br />團隊合作，開放進取。以禮待人，至誠守信。</span>"
 	}
 ]
 
