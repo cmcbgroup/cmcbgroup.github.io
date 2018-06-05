@@ -67,7 +67,7 @@
 					<a v-html="matchTitle(n.title)" :href="'default.html?n=21659' + i"></a>
 				</h6>
 				<p class="date" v-html="'發佈時間：' + n.date"></p>
-				<p v-html="matchContent(n.content[0])"></p>
+				<p v-html="matchContent(n.content)"></p>
 				<a class="btn" :href="'default.html?n=21659' + i">閱讀全文</a>
 			</div>
 			<br class="clear">
@@ -111,9 +111,12 @@
 					}
 				},
 				matchContent(txt) {
-					var str= txt +''
+					var str= txt[0] +''
+					if(str.indexOf('img') > -1){
+						str= txt[1] +''
+					}
 					if(str.length > 86){
-						return str.substring(0,90) + '......'
+						return str.substring(0,90) + ' ......'
 					}else{
 						return str.substring(0,90)
 					}

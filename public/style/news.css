@@ -119,6 +119,15 @@
 .news-nav .next{
 	float: right;
 }
+.news-default .default p.img-desciption,
+.news-default .default p.edit{
+	font-size:12px;
+	color:gray;
+	text-indent:0;
+}
+.news-default .default p.img-desciption{
+	text-align:center;
+}
 
 
 /* 活动图片 */
