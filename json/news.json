@@ -1,6 +1,6 @@
 var news = [
 	{
-		"title": "動漫在澳門： 澳門出發，世界立足！",
+		"title": "澳門出發，世界立足！",
 		"cover": "20180605/181841.jpg",
 		"content": [
 			"<img src='../public/images/news/20180605/181841.jpg' alt='' />",
