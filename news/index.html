@@ -112,7 +112,7 @@
 				},
 				matchContent(txt) {
 					var str= txt[0] +''
-					if(str.indexOf('img') > -1){
+					if(str.indexOf('img') > -1 || str.indexOf('video') > -1){
 						str= txt[1] +''
 					}
 					if(str.length > 86){
