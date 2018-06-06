@@ -198,8 +198,11 @@
 	background-size: 100%;
 	cursor: pointer;
 }
-.video-list .video:nth-child(1){
+.video-list .video{
 	border-bottom: 1px dashed #ddd;
+}
+.video-list .video:last-child{
+	border-bottom: 0 none;
 }
 .video-list .video p{
 	font-size: 16px;
