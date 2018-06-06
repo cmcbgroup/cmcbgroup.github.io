@@ -17,7 +17,7 @@ var culture = [
 			},
 			{
 				"title": "3、核心價值觀",
-				"description": "<span style='font-size:16px;font-weight:bold;color:#555;line-height:2.2em;'>開拓創新，精益求精。自我批判，艱苦奮鬥。<br />團隊合作，開放進取。以禮待人，至誠守信。</span>",
+				"description": "<div><span style='font-size:16px;font-weight:bold;color:#555;line-height:2.2em;'>熱愛生活，熱情工作。<br />自我批判，艱苦奮鬥。<br />團隊合作，開放進取。<br />成就客戶，至誠守信。</span></div>",
 				"photo": "about/culture-4.jpg",
 				"className": "left"
 			}
