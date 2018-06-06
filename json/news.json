@@ -59,7 +59,7 @@ var news = [
 		"title": "《青．談》 第十七集 － 發展社區經濟（下）",
 		"cover": "qingtan-02.jpg",
 		"content": [
-			"<video style='margin:0 auto;display:block;' preload controls poster='../public/video/qingtan-02.jpg' width='820'><source src='../public/video/x20180605212842.mp4'></video>",
+			"<video style='margin:0 auto;display:block;' preload controls poster='../public/video/qingtan-02.jpg' width='820'><source src='https://www.mattmatt.cn/video/x20180605212842.mp4'></video>",
 			"<p>經濟發展委員會委員梁孫旭和中南區工商會副理事長馮文謙在上集《青・談》討論了社區經濟的定義，今集兩位嘉賓會講講政府在推動社區經濟的發展中可擔任怎樣的角色以及如何利用節慶及文創產業推動社區經濟發展。</p>",
 			"<p class='edit'>主持人：梁寶瑩</p>",
 			"<p class='edit'>嘉賓：經濟發展委員會委員 梁孫旭 中南區工商會副理事長 馮文謙</p>"
@@ -70,7 +70,7 @@ var news = [
 		"title": "《青．談》 第十七集 － 發展社區經濟（上）",
 		"cover": "qingtan-01.jpg",
 		"content": [
-			"<video style='margin:0 auto;display:block;' preload controls poster='../public/video/qingtan-01.jpg' width='820'><source src='../public/video/s20180605195744.mp4'></video>",
+			"<video style='margin:0 auto;display:block;' preload controls poster='../public/video/qingtan-01.jpg' width='820'><source src='https://www.mattmatt.cn/video/s20180605195744.mp4'></video>",
 			"<p>近年澳門各區都有不同特色的活動，好像有情迷十月懷舊老街活動、藝墟、北區消費嘉年華等等，這些活動能否做到分流旅客，帶旺到舊區經濟呢？今集《青・談》請來經濟發展委員會委員梁孫旭和中南區工商會副理事長馮文謙一起談談澳門的社區經濟應怎樣發展。</p>",
 			"<p class='edit'>主持人：梁寶瑩</p>",
 			"<p class='edit'>嘉賓：經濟發展委員會委員 梁孫旭 中南區工商會副理事長 馮文謙</p>"
