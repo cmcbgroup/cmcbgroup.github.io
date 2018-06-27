@@ -52,7 +52,7 @@
 		
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
-			<a href="../index.html">首页</a> >
+			<a href="../index.html">首頁</a> >
 			<span>公司簡介</span> >
 			<span>企業文化</span>
 		</div>
@@ -61,8 +61,33 @@
 
 		<div class="culture-list base-wrap">
 			<div v-for="c in culture" class="culture" :class="{'full-img': c.fullImg}">
-				<img :src="'../public/images/' + c.photo" alt="">
-				<div class="content">
+				<div v-if="c.description[0].title">
+					<img :src="'../public/images/' + c.photo" alt="">
+					<h2><span v-html="c.title"></span></h2>
+					<dl class="culture-des-list" >
+						<dd v-for="d in c.description" :class="d.className">
+							<img :src="'../public/images/' + d.photo" alt="">
+							<div class="culture-des">
+								<h3><span v-html="d.title"></span></h3>
+								<ul class="glwh-list" v-if="typeof(d.description) === 'object'" >
+									<li v-for="dd in d.description" :class="dd.className">
+										<h4 v-html="dd.title"></h4>
+										<p v-for="ddd in dd.description" v-html="ddd"></p>
+									</li>
+								</ul>
+								<p v-else v-html="d.description"></p>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div v-else>
+					<h2><span v-html="c.title"></span></h2>
+					<img :src="'../public/images/' + c.photo" alt="">
+					<ul class="zdhxyz-list">
+						<li v-for="cd in c.description" v-html="cd"></li>
+					</ul>
+				</div>
+				<!-- <div class="content">
 					<h2><span v-html="c.title"></span></h2>
 					<h3 v-if="c.subTitle" v-html="c.subTitle"></h3>
 					<p v-if="c.description" v-html="c.description"></p>
@@ -72,7 +97,7 @@
 							<p class="desArry-p" v-html="t.description"></p>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 

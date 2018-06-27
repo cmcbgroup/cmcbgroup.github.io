@@ -52,7 +52,7 @@
 		
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
-			<a href="../index.html">首页</a> >
+			<a href="../index.html">首頁</a> >
 			<span>關於我們</span> >
 			<span>視頻中心</span>
 		</div>
@@ -108,13 +108,13 @@
 			},
 			methods: {
 				matchVideo(src, cover){
-					if(src.indexOf('http') > -1){
+					if(src.indexOf('http://') > -1){
 						var videoSrc =  "<embed src='http://player.youku.com/player.php/sid/XMzExMTc2MTA0MA==/v.swf' allowFullScreen='true' quality='high' width='820' height='460' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>"
 						this.v_video_defalut = videoSrc
 					} else {
 						var videoSrc =  "<video preload autoplay controls poster='../public/" + 
 										cover + "' width='820'>" +
-										"<source src='../public/" + src + "'>"+
+										"<source src='" + src + "'>"+
 										"</video>"
 						this.v_video_defalut = videoSrc
 					}
