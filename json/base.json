@@ -12,10 +12,10 @@ var h_menu = [
 				"title": "企業文化",
 				"href": "about/culture.html"
 			},
-			{
-				"title": "發展歷程",
-				"href": "about/history.html"
-			},
+			// {
+			// 	"title": "發展歷程",
+			// 	"href": "about/history.html"
+			// },
 			{
 				"title": "活動圖片",
 				"href": "news/activity.html"
