@@ -281,11 +281,11 @@ li{
 	background-repeat: no-repeat;
 	margin-top: 55px;
 }
-.industry-nav .btn .icon.comics{
+.industry-nav .btn .icon.habiliment{
 	background-position: 0 0;
 	background-position-y: 0;
 }
-.industry-nav .btn .icon.habiliment{
+.industry-nav .btn .icon.comics{
 	background-position-x: -60px;
 }
 .industry-nav .btn .icon.network{

@@ -1,4 +1,27 @@
 
+
+var JWCY = [
+	{
+		"title": "核心電商品牌",
+		"href": "industry/default.html?b=habiliment"
+	},
+	{
+		"title": "動漫產業",
+		"href": "industry/default.html?b=comics"
+	},
+	{
+		"title": "文創服務",
+		"href": "industry/default.html?b=network"
+	},
+	// {
+	// 	"title": "金融",
+	// 	"href": "industry/default.html?b=financial"
+	// },
+	{
+		"title": "其它收入",
+		"href": "industry/default.html?b=trading"
+	}
+]
 var h_menu = [
 	{
 		"title": "首頁",
@@ -25,28 +48,7 @@ var h_menu = [
 	{
 		"title": "津萬產業",
 		"href": "industry/index.html",
-		"submenu": [
-			{
-				"title": "動漫產業",
-				"href": "industry/default.html?b=comics"
-			},
-			{
-				"title": "潮流服裝",
-				"href": "industry/default.html?b=habiliment"
-			},
-			{
-				"title": "網絡科技",
-				"href": "industry/default.html?b=network"
-			},
-			{
-				"title": "金融",
-				"href": "industry/default.html?b=financial"
-			},
-			{
-				"title": "跨境貿易",
-				"href": "industry/default.html?b=trading"
-			}
-		]
+		"submenu": JWCY
 	},
 	{
 		"title": "關於我們",
@@ -87,28 +89,7 @@ var f_menu = {
 			"href": "about/history.html" 
 		}
 	],
-	"津萬產業": [
-		{
-			"title": "動漫產業",
-			"href": "industry/default.html?b=comics"
-		},
-		{
-			"title": "潮流服裝",
-			"href": "industry/default.html?b=habiliment"
-		},
-		{
-			"title": "網絡科技",
-			"href": "industry/default.html?b=network"
-		}
-		// {
-		// 	"title": "金融",
-		// 	"href": "" 
-		// },
-		// {
-		// 	"title": "跨境貿易",
-		// 	"href": "" 
-		// }
-	],
+	"津萬產業": JWCY,
 	"關於我們": [
 		{
 			"title": "企業新聞",

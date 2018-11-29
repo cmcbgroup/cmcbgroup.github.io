@@ -94,10 +94,10 @@
 					this.isPhone = false
 				}
 				var hash = this.GetQueryString("b")
-				if(hash !== 'comics'){
-					var index = hash === 'habiliment'? 1 : hash === 'network' ? 2 : hash === 'financial' ? 3 : hash === 'trading' ? 4 : 0
+				// if(hash !== 'comics'){
+					var index = hash === 'habiliment'? 0 : hash === 'network' ? 2 : hash === 'financial' ? 3 : hash === 'trading' ? 4 : 1
 					this.v_industry_default = this.v_industry[index]
-				}
+				// }
 			},
 			methods: {
 				GetQueryString(name) {
