@@ -82,7 +82,7 @@
 				return {
 					h_menu: h_menu,
 					v_industry: industry,
-					v_industry_default: industry[0],
+					v_industry_default: industry[industry.length - 1],
 					v_menu: f_menu,
 					showPhoneMenu: false,
 					show_sub_menu_index: false,
@@ -94,10 +94,13 @@
 					this.isPhone = false
 				}
 				var hash = this.GetQueryString("b")
-				// if(hash !== 'comics'){
-					var index = hash === 'habiliment'? 0 : hash === 'network' ? 2 : hash === 'financial' ? 3 : hash === 'trading' ? 4 : 1
-					this.v_industry_default = this.v_industry[index]
-				// }
+				for(var i=0; industry.length > i; i++){
+					if(industry[i].en === hash){
+						return this.v_industry_default = this.v_industry[i]
+					}
+					
+					// return this.v_industry_default = this.v_industry[index]
+				}
 			},
 			methods: {
 				GetQueryString(name) {
