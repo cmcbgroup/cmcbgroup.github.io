@@ -69,10 +69,11 @@
 		</div>
 
 		<div class="b-default base-wrap">
-			<img :src="'../public/images/industry/' + v_industry_default.banner" alt="">
-			<div v-if="v_industry_default.description" class="description">
+			<img :src="'../public/images/industry/' + ( typeof(v_industry_default.banner) === 'string' ? v_industry_default.banner : v_industry_default.banner[0])" alt="">
+			<div class="description">
 				<h2 v-html="v_industry_default.project"></h2>
-				<p v-html="matchDescription(v_industry_default.description)"></p>
+				<h3 class="fb mb5" v-if="v_industry_default.subtitle" v-html="v_industry_default.subtitle"></h3>
+				<p v-html="!v_industry_default.description ? '--' : matchDescription(v_industry_default.description)"></p>
 				<a class="btn" :href="'default.html?b=' + v_industry_default.en">了解详情</a>
 			</div>
 		</div>
@@ -113,8 +114,8 @@
 					this.v_industry_index = i
 				},
 				matchDescription(des){
-					if(des.length > 180){
-						return des.substring(0, 180)
+					if(des.length > 178){
+						return des.substring(0, 178) + '...'
 					}else{
 						return des
 					}

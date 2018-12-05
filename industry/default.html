@@ -60,9 +60,13 @@
 		<div class="title"><span v-html="v_industry_default.project">產業詳情</span><div class="line"></div></div>
 
 		<div class="industry-default base-wrap">
-			<p v-if="v_industry_default.description" v-html="v_industry_default.description"></p>
-			<p class="waiting" v-else>不日推出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;敬請期待...</p>
-			<img :src="'../public/images/industry/' + v_industry_default.banner" alt="">
+			<h3 class="fb tc" v-if="v_industry_default.subtitle" v-html="v_industry_default.subtitle"></h3>
+			<p class="mt15" v-if="v_industry_default.description" v-html="v_industry_default.description"></p>
+			<!-- <p class="waiting" v-else>不日推出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;敬請期待...</p> -->
+			<img v-if="typeof(v_industry_default.banner) === 'string'" :src="'../public/images/industry/' + v_industry_default.banner" alt="">
+			<div class="mt15" v-eles v-for="img in v_industry_default.banner">
+				<img :src="'../public/images/industry/' + img" alt="">
+			</div>
 		</div>
 
 		<div class="footer">

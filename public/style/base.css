@@ -63,7 +63,11 @@ li{
 .clear{clear: both;}
 .Hide{display: none;}
 .Hide.Show{display: block;}
-
+.tc{text-align: center;}
+.fb{font-weight: bold;}
+.mb5{margin-bottom: 5px;}
+.mb10{margin-bottom: 10px;}
+.mt15{margin-top: 15px;}
 .Loading{
 	height: 100%;
 	width: 100%;
@@ -280,6 +284,7 @@ li{
 	background-image: url('../images/icon.png');
 	background-repeat: no-repeat;
 	margin-top: 55px;
+	padding: 0;
 }
 .industry-nav .btn .icon.habiliment{
 	background-position: 0 0;
@@ -288,10 +293,10 @@ li{
 .industry-nav .btn .icon.comics{
 	background-position-x: -60px;
 }
-.industry-nav .btn .icon.network{
+.industry-nav .btn .icon.culture{
 	background-position-x: -120px;
 }
-.industry-nav .btn .icon.financial{
+.industry-nav .btn .icon.other{
 	background-position-x: -180px;
 }
 .industry-nav .btn .icon.trading{
