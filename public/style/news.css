@@ -166,6 +166,16 @@
 	color: #eda93a;
 	color: #000;
 }
+.activity-description{
+	padding: 0 15px;
+}
+.activity-description p{
+	font-size: 16px;
+	line-height: 1.7em;
+	text-indent: 2em;
+	margin-bottom: 15px;
+}
+
 
 /* 活动页面 */
 .activity-default{

@@ -53,13 +53,15 @@
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
 			<a href="../index.html">首頁</a> >
+			<a href="../about/index.html">公司簡介</a> >
 			<span>活動圖片</span>
 		</div>
 
 		<div class="title"><span>活動圖片</span><div class="line"></div></div>
 		<div class="activity-list base-wrap">
 			<a class="activity" v-for="(a, i) in v_activity" :href="'activity-default.html?d='+a.date">
-				<img :src="'../public/images/activity/'+a.date+'/'+a.date+'1.jpg'" alt="">
+				<img v-if="a.cover" :src="'../public/images/activity/'+a.date+'/'+ a.cover " alt="">
+				<img v-else :src="'../public/images/activity/'+a.date+'/'+a.date+'1.jpg'" alt="">
 				<p v-html="a.title"></p>
 			</a>
 			<br class="clear">

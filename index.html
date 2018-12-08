@@ -67,8 +67,8 @@
 				<div class="description" :class="{'positionUnset' : !isPhone}">
 					<div class="left">
 						<div class="content">
-							<h3>津萬文創商業集團</h3>
-							<p>文化產業是中國最具發展潛力的新興產業之一，也是中國政府列為重點扶持的文化產業，現在正在成為新的經濟增長點。津萬抓緊國家對文化的機遇，以自家品牌及品牌管理作為核心發展，打造全方位文化產業集團，覆蓋整個產業鏈...</p>
+							<h3><a style="font-weight: bold;color:#333;" href="about/index.html">津萬文創商業集團</a></h3>
+							<p v-html="(about_description.description[0] + about_description.description[1]).substring(0,150) + '...'" ></p>
 						</div>
 					</div>
 					<div class="right">
@@ -90,9 +90,11 @@
 			<!-- <div class="banner-2"><img width="100%" src="public/images/banner2.jpg" alt=""></div> -->
 			<div v-if="v_activity" class="title"><span>活動圖片</span><div class="line"></div></div>
 			<div v-if="v_activity" class="i-activity base-wrap">
-				<a v-for="p in v_activity.p_length" :href="'news/activity.html'">
-					<img :src="'public/images/activity/'+v_activity.date+'/'+v_activity.date+p+'.jpg'" :alt="v_activity.title">
-				</a>
+				<template v-for="va in v_activity">
+					<a :href="'news/activity-default.html?d=' + va.date" :title="va.title">
+						<img :src="'public/images/activity/'+va.date+'/'+va.date+'1.jpg'" :alt="va.title">
+					</a>
+				</template>
 				<br class="clear">
 			</div>
 
@@ -158,8 +160,11 @@
 			mounted() {
 				this.v_news = news.slice(0,3)
 
-				var matchActivity = activity[0]
-				matchActivity.p_length = 3
+				var matchActivity = [
+					activity[1],
+					activity[2],
+					activity[3]
+				]
 				this.v_activity = matchActivity
 				if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 					this.isPhone = false

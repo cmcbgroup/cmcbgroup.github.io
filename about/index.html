@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>關於我們 - 津萬文創商業集團</title>
+	<title>公司簡介 - 津萬文創商業集團</title>
     <meta name="viewport" content="width=1200">
 	<script src="../public/vue.js"></script>
 	<link rel="stylesheet" type="text/css" href="../public/style/base.css">
@@ -29,10 +29,16 @@
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
 			<a href="../index.html">首頁</a> >
-			<span>公司簡介</span>
+			<span>{{p_title}}</span>
 		</div>
 
-		<div class="title"><span>集团新闻</span><div class="line"></div></div>
+		<div class="title"><span>{{p_title}}</span><div class="line"></div></div>
+		<div class="base-wrap">
+			<div class="pl35 pr35">
+				<p class="about-des" v-for="p in des.description" v-html="p"></p>
+				<img :src="des.banner" alt="">
+			</div>
+		</div>
 
 		<div class="footer">
 			<div class="f-wrap">
@@ -50,10 +56,13 @@
 			data() {
 				return {
 					h_menu: h_menu,
-					f_menu: f_menu
+					f_menu: f_menu,
+					p_title: '公司簡介',
+					des: about_description
 				}
 			},
 			mounted() {
+				console.log(this.des)
 			},
 			methods: {
 

@@ -60,6 +60,9 @@
 		<div class="title"><span v-html="activity_default.title"></span><div class="line"></div></div>
 		<div class="activity-date" v-html="matchDate(activity_default.date)"></div>
 		<div class="activity-default base-wrap">
+			<div class="activity-description" v-if="" v-for="des in activity_default.description">
+				<p v-html="des"></p>
+			</div>
 			<img v-for="i in activity_default.p_length" 
 				:src="'../public/images/activity/' + activity_default.date + '/' + activity_default.date + i + '.jpg'" alt="">
 		</div>

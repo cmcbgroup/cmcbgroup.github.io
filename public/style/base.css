@@ -36,6 +36,7 @@ body{
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: default;
+  background-color: white;
 }
 
 blockquote, q{
@@ -68,6 +69,16 @@ li{
 .mb5{margin-bottom: 5px;}
 .mb10{margin-bottom: 10px;}
 .mt15{margin-top: 15px;}
+.pl35{padding-left: 35px;}
+.pr35{padding-right: 35px;}
+
+.about-des{
+	font-size: 17px;
+	line-height: 1.75em;
+	text-indent: 2em;
+	margin-bottom: 15px;
+}
+
 .Loading{
 	height: 100%;
 	width: 100%;
