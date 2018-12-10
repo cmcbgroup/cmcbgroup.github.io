@@ -2,14 +2,15 @@
 var pathname = window.location.pathname,
 	m_index = {
 	1: [
-		"culture",
-		"history"
+		"about/index",
+		"about/culture",
+		"news/activity"
 	],
 	2: "industry",
 	3: [
-		"news",
-		"video",
-		"team"
+		"news/index",
+		"about/video",
+		"about/team"
 	],
 	4: "join",
 	5: "contact"
@@ -35,3 +36,15 @@ var getMenuIndex = function() {
 	return parseInt(menuIndex)
 }
 var h_menu_index = getMenuIndex()
+
+var $App = document.getElementById('app')
+
+console.log($App.offsetHeight)
+// console.log('availHeight:' + window.screen.availHeight)
+// console.log('offsetHeight:' + document.body.offsetHeight)
+
+// var getBrowserType = function() {
+// 	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+// 		this.isPhone = false
+// 	}
+// }

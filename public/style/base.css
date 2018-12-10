@@ -116,6 +116,16 @@ li{
 	background: url('../images/logo.png') no-repeat center center;
 }
 
+.footerStand{
+	height: 265px;
+}
+.footer.Fixed{
+	position:fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
 .base-wrap,
 .footer .f-wrap{
 	width: 1200px;
@@ -429,7 +439,7 @@ li{
 	background: url('../images/sub-banner.jpg') no-repeat center center;
 }
 .nav{
-	font-size: 14px;
+	font-size: 0.8em;
 	margin-top: 30px;
 }
 .nav a,
@@ -551,7 +561,10 @@ li{
 }
 
 
- @media screen and (min-width: 1199px){
+/* @media screen and (max-width: 950px){
+	#app{
+		font-size: 24px;
+	}
  	.header h1 .logo{
  		margin-left: 25px;
  	}
@@ -574,4 +587,4 @@ li{
 	div.jobs-list .list ul li:nth-child(2){
 		width: 20%;
 	}
- }
+ } */

@@ -11,18 +11,19 @@
 	float: left;
 }
 .b-default .description{
-	line-height: 1.65em;
+	font-size: 13px;
+	line-height: 1.70em;
 	padding: 30px;
 	overflow: hidden;
 }
 .b-default .description h2{
-	font-size: 18px;
+	font-size: 1.5em;
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
 .b-default .description p{
-	font-size: 13px;
+	font-size: 1em;
 }
 .b-default .description p hr{
 	padding:3px 0;
@@ -30,11 +31,11 @@
 	border: 0;
 }
 .b-default .description .btn{
-	font-size: 14px;
+	font-size: 1.2em;
 	font-weight: bold;
 	color: #eda93a;
 	display: inline-block;
-	padding: 5px 30px;
+	padding: 8px 30px;
 	border: 1px solid #eda93a;
 	border-radius: 3px;
 	margin-top: 20px;

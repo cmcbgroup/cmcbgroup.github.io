@@ -1,0 +1,51 @@
+
+ @media screen and (max-width: 1200px){
+	.base-wrap{
+		width: 1100px;
+	}
+	.nav a, .nav span{
+		font-size: 18px;
+	}
+	.title{
+		margin-bottom: 50px;
+	}
+	.title span{
+		font-size: 30px;
+	}
+	.about-des,
+	.industry-default p,
+	.b-default .description,
+	.news-default .default p{
+		font-size: 24px;
+	}
+	.news-default .default p.img-desciption{
+		font-size: 15px;
+	}
+	.industry-default h3{
+		font-size: 28px;
+	}
+
+	.industry-default img,
+	.news-default .default img{
+		width: 100%;
+		margin-top: 45px;
+	}
+	/* 津万产业 */
+	.b-default{
+		height: auto;
+		margin-bottom: 80px;
+	}
+	.b-default img{
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+	.b-default .description .btn{
+		color: white;
+		background-color: #eda93a;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		margin-top: 30px;
+		letter-spacing: 0.3em;
+	}
+ }
