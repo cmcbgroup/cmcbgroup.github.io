@@ -61,29 +61,45 @@
 		<div class="title"><span>管理團隊</span><div class="line"></div></div>
 
 		<div class="team-list">
-			<div v-if="!staff" class="base-wrap">
-				<div class="team" v-for="(t, i) in team">
-					<img @click="_showStaff(i)" :src="'../public/images/team/' + t.avatar" alt="">
-					<h2>
-						<span class="name" v-html="t.name"></span>
-						<span class="line"></span>
-					</h2>
-					<p v-html="t.work"></p>
+			<template v-if="isPhone">
+				<div v-if="!staff" class="base-wrap">
+					<div class="team" v-for="(t, i) in team">
+						<img @click="_showStaff(i)" :src="'../public/images/team/' + t.avatar" alt="">
+						<h2>
+							<span class="name" v-html="t.name"></span>
+							<span class="line"></span>
+						</h2>
+						<p v-html="t.work"></p>
+					</div>
+					<br class="clear">
 				</div>
-				<br class="clear">
-			</div>
-			<div v-if="staff" class="default">
+				<div v-if="staff" class="default">
+					<div class="left">
+						<img :src="'../public/images/team/' + staff.avatar" alt="">
+					</div>
+					<div class="right">
+						<div class="content">
+							<h3 v-html="staff.name"></h3>
+							<h4 v-html="staff.enname"></h4>
+							<h5 v-html="staff.work"></h5>
+							<h6 v-html="staff.enwork"></h6>
+							<p v-html="staff.description"></p>
+							<span class="close" @click="_closeStaff()"></span>
+						</div>
+					</div>
+				</div>
+			</template>
+			<div v-else v-for="t in v_team" class="default" :title="t.description.length" :style="t.description.length > 400 ? 'height:950px;' : ''">
 				<div class="left">
-					<img :src="'../public/images/team/' + staff.avatar" alt="">
+					<img :src="'../public/images/team/' + t.avatar" alt="">
 				</div>
 				<div class="right">
 					<div class="content">
-						<h3 v-html="staff.name"></h3>
-						<h4 v-html="staff.enname"></h4>
-						<h5 v-html="staff.work"></h5>
-						<h6 v-html="staff.enwork"></h6>
-						<p v-html="staff.description"></p>
-						<span class="close" @click="_closeStaff()"></span>
+						<h3 v-html="t.name"></h3>
+						<h4 v-html="t.enname"></h4>
+						<h5 v-html="t.work"></h5>
+						<h6 v-html="t.enwork"></h6>
+						<p v-html="t.description"></p>
 					</div>
 				</div>
 			</div>
@@ -120,7 +136,6 @@
 			},
 			methods: {
 				_showStaff(i){
-
 					this.staff = this.v_team[i]
 				},
 				_closeStaff() {

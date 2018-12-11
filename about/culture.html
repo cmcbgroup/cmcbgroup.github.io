@@ -55,10 +55,10 @@
 		<div class="nav base-wrap">
 			<a href="../index.html">首頁</a> >
 			<span>公司簡介</span> >
-			<span>企業文化</span>
+			<span>{{p_title}}</span>
 		</div>
 
-		<div class="title"><span>企業文化</span><div class="line"></div></div>
+		<div class="title"><span>{{p_title}}</span><div class="line"></div></div>
 
 		<div class="culture-list base-wrap">
 			<div v-for="c in culture" class="culture" :class="{'full-img': c.fullImg}">
@@ -113,6 +113,18 @@
 	</div>
 	<script type="text/javascript" src="../public/js/base.js"></script>
 	<script type="text/javascript">
+		var pdata = {
+			h_menu: h_menu,
+			v_menu: f_menu,
+			p_title: '企業文化',
+			culture: culture,
+			showPhoneMenu: false,
+			show_sub_menu_index: false,
+			isPhone: true
+		}
+	</script>
+	<script type="text/javascript" src="../control/v-base.js"></script>
+	<!-- <script type="text/javascript">
 		var app = new Vue({
 			el: '#app',
 			data() {
@@ -143,6 +155,6 @@
 				}
 			}
 		})
-	</script>
+	</script> -->
 </body>
 </html>

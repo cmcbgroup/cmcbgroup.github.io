@@ -1,5 +1,6 @@
 
 .join-about{
+	font-size: 14px;
 	color: white;
 	height: 390px;
 	line-height: 1.7em;
@@ -10,13 +11,12 @@
 	margin-bottom: 60px;
 }
 .join-about h2{
-	font-size: 22px;
+	font-size: 1.5em;
 	font-weight: bold;
 	padding-top: 10px;
 	padding-bottom: 15px;
 }
 .join-about p{
-	font-size: 14px;
 	margin-top: 15px;
 }
 
@@ -98,31 +98,32 @@
 
 /* 职位详情 */
 .jobs{
+	font-size: 14px;
 	color: #676767;
 	background-color: #fafafa;
 	padding:40px 80px;
 	margin-bottom: 30px;
 }
 .jobs.info{
-	font-size: 0;
+	/* font-size: 0; */
 }
 .jobs.info li{
-	font-size: 14px;
+	/* font-size: 14px; */
 	height: 36px;
 	line-height: 36px;
-	width: 43%;
+	width: 39%;
 	display: inline-block;
 }
 .jobs.info li span:nth-child(2){color:#333;}
-.jobs.info li:nth-child(3n){width:14%}
+.jobs.info li:nth-child(3n){width:20%}
 dl.jobs{
-	font-size: 14px;
+	/* font-size: 14px; */
 	position: relative;
 	padding-left: 200px;
 	padding-bottom: 30px;
 }
 dl.jobs dt{
-	font-size: 20px;
+	font-size: 1.4em;
 	font-weight: bold;
 	color: #333;
 	position: absolute;
