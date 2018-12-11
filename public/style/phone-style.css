@@ -107,6 +107,9 @@
 		right: -80px;
 	}
 	/* 活动图片 */
+	.activity-date{
+		font-size: 22px;
+	}
 	.activity-list .activity p{
 		font-size: 24px;
 	}
