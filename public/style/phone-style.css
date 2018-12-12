@@ -73,6 +73,9 @@
 		margin-top: 20px;
 		padding: 15px 30px;
 	}
+	.news-nav{
+		font-size: 22px;
+	}
 	/* 视频中心 */
 	.video-list .video .cover{height: 620px;}
 	.video-list .video p{
@@ -124,9 +127,21 @@
 		font-size: 24px;
 	}
 	.activity-default img{width: 100%;}
+	/* 关于我们 */
+	.history-list{font-size: 26px;}
+	.history-list .history .content{
+		border-color: #ecaa39;
+	}
+	.history-list .history .content .arrow-1{
+		border-color: transparent #ecaa39;
+	}
+
+	.history-list .history .content .circle{
+		background-color: #edaa35;
+	}
 	/* 加入我们 */
 	.join-about{
-		font-size: 26px;
+		font-size: 24px;
 		background-size: 100% 740px;
 		padding: 800px 60px 50px;
 		height: 1180px;

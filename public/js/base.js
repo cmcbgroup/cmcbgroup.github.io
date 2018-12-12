@@ -4,6 +4,7 @@ var pathname = window.location.pathname,
 	1: [
 		"about/index",
 		"about/culture",
+		"about/history",
 		"news/activity"
 	],
 	2: "industry",

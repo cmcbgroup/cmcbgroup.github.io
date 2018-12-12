@@ -1,5 +1,12 @@
 var news = [
 	{
+		"title": "MAD！動漫文創產業節",
+		"cover": "20181103/20181103-cover.jpg",
+		"filename": "20181103",
+		"img_length": 35,
+		"date": "2018-11-03"
+	},
+	{
 		"title": "津萬建動漫品牌助澳文創發展",
 		"cover": "cover-1.jpg",
 		"content": [
@@ -176,9 +183,14 @@ var activity = [
 
 var video = [
 	{
+		"cover": "video/201811031.jpg",
+		"description": "MAD！動漫文創產業節",
+		"src": "https://www.mattmatt.cn/video/mad2.mp4?tdsourcetag=s_pcqq_aiomsg"
+	},
+	{
 		"cover": "video/cover-1.jpg",
 		"description": "津萬文創商業集團簽約儀式",
-		"src": "http://player.youku.com/player.php/sid/XMzExMTc2MTA0MA==/v.swf"
+		"src": "http://player.youku.com/embed/XMzExMTc2MTA0MA=="
 	},
 	{
 		"cover": "video/cover-2.jpg",

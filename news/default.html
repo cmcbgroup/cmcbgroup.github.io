@@ -63,7 +63,8 @@
 		<div class="news-default base-wrap">
 			<div v-html="'發佈時間：' + news_default.date" class="date"></div>
 			<div class="default">
-				<section v-for="c in news_default.content" v-html="c"></section>
+				<section v-if="news_default.content" v-for="c in news_default.content" v-html="c"></section>
+				<img v-if="news_default.img_length" v-for="i in news_default.img_length" :src="'../public/images/news/'+ news_default.filename +'/' + news_default.filename + i +'.jpg'" alt="">
 			</div>
 			<div class="news-nav">
 				<span class="next">下一篇：
@@ -114,6 +115,7 @@
 				this.news_default = news[index]
 				this.prev_news = news[index-1]
 				this.next_news = news[index+1]
+
 			},
 			methods: {
 				GetQueryString(name) {
