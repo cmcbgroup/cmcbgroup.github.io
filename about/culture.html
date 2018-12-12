@@ -58,6 +58,12 @@
 			<span>{{p_title}}</span>
 		</div>
 
+		<div class="title"><span>公司簡介</span><div class="line"></div></div>
+		<div class="base-wrap">
+			<p class="about-des" v-for="des in about_description.description" v-html="des"></p>
+			<!-- <img style="width: 100%;" :src="about_description.banner" alt=""> -->
+		</div>
+
 		<div class="title"><span>{{p_title}}</span><div class="line"></div></div>
 
 		<div class="culture-list base-wrap">
