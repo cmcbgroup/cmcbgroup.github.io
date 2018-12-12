@@ -109,11 +109,11 @@
 			<div class="title"><span>集團新聞</span><div class="line"></div></div>
 			<div class="news-list row-3 base-wrap">
 				<div v-if="v_news" v-for="(n, i) in v_news" class="news">
-					<a :href="'news/default.html?n=21659' + i" class="cover">
+					<a :href="'news/default.html?n=21659' + (i + 1)" class="cover">
 						<img :src="'public/images/news/'+n.cover" alt="">
 					</a>
 					<h6 :title="n.title">
-						<a v-html="matchTitle(n.title)" :href="'news/default.html?n=21659' + i"></a>
+						<a v-html="matchTitle(n.title)" :href="'news/default.html?n=21659' + (i + 1)"></a>
 					</h6>
 					<p v-html="matchContent(n.content)"></p>
 				</div>
@@ -158,7 +158,7 @@
 				}
 			},
 			mounted() {
-				this.v_news = news.slice(0,3)
+				this.v_news = news.slice(1,4)
 
 				var matchActivity = [
 					activity[1],
