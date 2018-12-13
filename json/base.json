@@ -91,8 +91,8 @@ var h_menu = [
 
 var f_menu = {
 	"津萬簡介": CULTURE,
-	"津萬產業": INDUSTRY,
-	"關於我們": ABOUT,
+	"津萬產業": [INDUSTRY[0], INDUSTRY[1], INDUSTRY[2]],
+	"關於我們": [ABOUT[0], INDUSTRY[3], ABOUT[2]],
 	"聯繫我們": [
 		{
 			"title": "加入我們",
@@ -101,7 +101,8 @@ var f_menu = {
 		{
 			"title": "聯繫方式",
 			"href": "about/contact.html" 
-		}
+		},
+		ABOUT[1]
 	]
 	// "微信公眾號": {
 	// 	"qrcode": ""
