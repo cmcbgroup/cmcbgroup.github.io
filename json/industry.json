@@ -4,7 +4,7 @@ var industry = [
 		"en": "habiliment",
 		// "description": "Casual but Elegant “簡約卻不失優雅”一直是 mattmatt 堅持的設計風格，充分吸納源自于日韓等地的時尚設計風格，並巧妙地將這些風格進行融合，根據每季設計主題，配合現代個人特點要求，給予各種形象需求。在不同搭配的形式下，滿足到各種不同場合的穿著需求，打造獨具品位的服飾文化。",
 		"description": "由2016年最初以「Casual but Elegant 簡約卻不失優雅」的時尚潮流理念為主的電子商務網站。<hr />進一步升級至「Things're Good Here 這裡都是最好的」的全品類網上銷售平台 mattmatt.cn 一直堅持給客戶最好、最實惠、最時尚及最健康的商品。<hr />我們一律以「採 — 生 — 銷」的經營方針，以自主採購、設計、生產、銷售的全方位供應鏈策略。目的始終是為了給客戶最好、最實惠、最時尚及最健康的商品， mattmatt.cn 堅持不走自身作為開放平台的導向，堅持以超越自營平台的概念 —— 「採 — 生 — 銷」，務求建立自身的品牌價值，時刻滿足客戶需求，把 mattmatt.cn 打造成中國的國際零售品牌。",
-		"banner": "habiliment.jpg"
+		"banner": "habiliment.png"
 	},
 	{
 		"project": "動漫產業",
