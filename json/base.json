@@ -16,25 +16,25 @@ var CULTURE = [
 ]
 var INDUSTRY = [
 	{
-		"title": "核心電商品牌",
+		"title": "零售",
 		"href": "industry/default.html?b=habiliment"
 	},
 	{
-		"title": "動漫產業",
+		"title": "文化",
 		"href": "industry/default.html?b=comics"
 	},
 	{
-		"title": "文創服務",
+		"title": "製造",
 		"href": "industry/default.html?b=culture"
 	},
-	// {
-	// 	"title": "金融",
-	// 	"href": "industry/default.html?b=financial"
-	// },
 	{
-		"title": "其它收入",
-		"href": "industry/default.html?b=other"
-	}
+		"title": "金融",
+		"href": "industry/default.html?b=financial"
+	},
+	// {
+	// 	"title": "其它收入",
+	// 	"href": "industry/default.html?b=other"
+	// }
 ]
 var ABOUT = [
 	{

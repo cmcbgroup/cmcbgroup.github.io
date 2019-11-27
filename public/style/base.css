@@ -185,9 +185,9 @@ li{
 	text-align: center
 }
 .brands-list a,
-.brands-list .brand{
+.brands-list span{
 	display: inline-block;
-	width: 33.33%;
+	width: 24.8%;
 }
 .brands-list .brand p{
 	font-size: 14px;
