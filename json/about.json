@@ -7,7 +7,7 @@ var about = {
 var culture = [
 	{
 		"photo": "about/culture-0.jpg",
-		"title": "一、思想体系",
+		"title": "一、思想体系1",
 		"description": [
 			{
 				"title": "1、願景",
