@@ -80,10 +80,11 @@
 				<div class="banner-bg"></div>
 			</div>
 
-			<div class="industry-nav">
+			<div class="industry-nav__new">
 				<a v-for="b in industry" :href="'industry/default.html?b=' + b.en" class="btn">
 					<span class="icon" :class="b.en"></span>
-					<span v-html="b.project"></span>
+					<span class="project" v-html="b.project"></span>
+					<span class="in-title" v-html="b.title"></span>
 				</a>
 			</div>
 

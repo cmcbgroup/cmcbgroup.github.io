@@ -279,14 +279,13 @@ li{
 }
 /* .banner .right .content-tel p{font-size:32px;font-weight:bold;} */
 
-/* 津万产业 */
+/* 津万产业 old*/
 .industry-nav{
 	height: 200px;
 	background-color: #f8f8f8;
 	margin-top: 25px;
 	margin-bottom: 50px;
 	text-align: center;
-	/* background:#f7f6f2 url('../images/i-about-bg.png') center center repeat-x; */
 	background-size: 450px 538px;
 }
 .industry-nav .btn{
@@ -336,6 +335,99 @@ li{
 .industry-nav .btn:hover .icon,
 .industry-nav .btn.On .icon{
 	background-position-y: -50px;
+}
+/* 津万产业 new*/
+.industry-nav__new{
+	height: 200px;
+	background-color: #f8f8f8;
+	margin-top: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+	background-size: 450px 538px;
+}
+.industry-nav__new.default {
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: transparent;
+}
+.industry-nav__new.default .btn{
+	position: relative;
+}
+.industry-nav__new.default .btn::before {
+	content: '';
+	position: absolute;
+	height: 70%;
+	top: 15%;
+	left: 0;
+	border-left: 1px solid #eee;
+}
+.industry-nav__new.default .btn:first-child::before{
+	display: none;
+}
+.industry-nav__new.default .btn.Stand::after {
+	content: '';
+	position: absolute;
+	height: 4px;
+	width: 80%;
+	background-color: #E1A33B;
+	left: 10%;
+	bottom: 10px;
+}
+.industry-nav__new .btn{
+	font-size: 14px;
+	color: #333;
+	display: inline-block;
+	width: 260px;
+	height: 200px;
+	cursor: pointer;
+}
+.industry-nav__new .btn .icon{
+	display: inline-block;
+	width: 68px;
+	height: 55px;
+	overflow: hidden;
+	background-image: url('../images/icon_2.png');
+	background-repeat: no-repeat;
+	margin-top: 37px;
+	margin-bottom: 3px;
+	padding: 0;
+	transition: transform 0.1s;
+}
+.industry-nav__new .btn .icon.advertising{
+	background-position-y: 4px;
+}
+.industry-nav__new .btn .icon.SAAS{
+	background-position-y: -72px;
+}
+.industry-nav__new .btn .icon.intellectual{
+	background-position-y: -102px;
+	background-position-x: center;
+    background-size: 55px;
+}
+.industry-nav__new .btn .icon.games{
+	background-position-y: -200px;
+}
+.industry-nav__new .btn span{
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+}
+.industry-nav__new .btn span.project{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+.industry-nav__new .btn span.in-title{
+	font-size: 0.8em;
+	color: #999;
+}
+/* .industry-nav__new .btn:hover,
+.industry-nav__new .btn.On{
+	color: white;
+	background-color: #eda93a;
+} */
+.industry-nav__new .btn:hover .icon,
+.industry-nav__new .btn.On .icon{
+	transform: scale(1.2);
 }
 
 .i-about{

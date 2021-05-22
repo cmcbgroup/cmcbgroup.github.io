@@ -50,18 +50,25 @@
 				</ul>
 			</dd>
 		</dl>
-		
 		<div class="sub-banner"></div>
 		<div class="nav base-wrap">
 			<a href="../index.html">首頁</a> >
 			<a href="index.html">津萬產業</a> >
 			<span v-html="v_industry_default.project">產業詳情</span>
 		</div>
-
+		
+		<div class="industry-nav__new default">
+			<a v-for="b in industry" :href="'default.html?b=' + b.en" class="btn" :class="{'Stand': hash === b.en}">
+				<span class="icon" :class="b.en"></span>
+				<span class="project" v-html="b.project"></span>
+				<span class="in-title" v-html="b.title"></span>
+			</a>
+		</div>
 		<div class="title"><span v-html="v_industry_default.project">產業詳情</span><div class="line"></div></div>
-
+		<div class="industry-sub__banner"><img :src="'../public/images/industry/' + v_industry_default.en + '.png'" /></div>
+		<!-- <div class="sub-title"><span v-html="v_industry_default.project">產業詳情</span><div class="line"></div></div> -->
 		<div class="industry-default base-wrap">
-			<h3 class="fb tc" v-if="v_industry_default.subtitle" v-html="v_industry_default.subtitle"></h3>
+			<h3 class="industry-default__title" v-if="v_industry_default.title" v-html="v_industry_default.title"></h3>
 			<p class="mt15" v-if="v_industry_default.description" v-html="v_industry_default.description"></p>
 			<!-- <p class="waiting" v-else>不日推出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;敬請期待...</p> -->
 			<!-- <img v-if="typeof(v_industry_default.banner) === 'string'" :src="'../public/images/industry/' + v_industry_default.banner" alt=""> -->
@@ -91,7 +98,8 @@
 					v_menu: f_menu,
 					showPhoneMenu: false,
 					show_sub_menu_index: false,
-					isPhone: true
+					isPhone: true,
+					hash: ''
 				}
 			},
 			mounted() {
@@ -99,6 +107,7 @@
 					this.isPhone = false
 				}
 				var hash = this.GetQueryString("b")
+				this.hash = hash
 				for(var i=0; industry.length > i; i++){
 					if(industry[i].en === hash){
 						return this.v_industry_default = this.v_industry[i]
