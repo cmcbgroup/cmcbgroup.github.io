@@ -16,20 +16,20 @@ var CULTURE = [
 ]
 var INDUSTRY = [
 	{
-		"title": "零售",
-		"href": "industry/default.html?b=habiliment"
+		"title": "廣告投放",
+		"href": "industry/default.html?b=advertising"
 	},
 	{
-		"title": "文化",
-		"href": "industry/default.html?b=comics"
+		"title": "短視頻",
+		"href": "industry/default.html?b=SAAS"
 	},
 	{
-		"title": "製造",
-		"href": "industry/default.html?b=culture"
+		"title": "知識產權",
+		"href": "industry/default.html?b=intellectual"
 	},
 	{
-		"title": "金融",
-		"href": "industry/default.html?b=financial"
+		"title": "遊戲營銷",
+		"href": "industry/default.html?b=games"
 	},
 	// {
 	// 	"title": "其它收入",
