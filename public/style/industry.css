@@ -78,6 +78,8 @@
 }
 .industry-sub__banner img {
 	width: 100%;
+	height: 251px;
+	background-color: #fefefe;
 }
 
 .industry-default__title {
